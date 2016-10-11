@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		273271D61DABE705001AF568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273271D51DABE705001AF568 /* AppDelegate.swift */; };
-		273271D81DABE705001AF568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273271D71DABE705001AF568 /* ViewController.swift */; };
+		273271D81DABE705001AF568 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273271D71DABE705001AF568 /* AboutViewController.swift */; };
 		273271DB1DABE705001AF568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273271D91DABE705001AF568 /* Main.storyboard */; };
 		273271DD1DABE705001AF568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273271DC1DABE705001AF568 /* Assets.xcassets */; };
 		273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273271DE1DABE705001AF568 /* LaunchScreen.storyboard */; };
-		273271E81DABFE16001AF568 /* FunnyKid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 273271E71DABFE16001AF568 /* FunnyKid.ttf */; };
-		273271ED1DABFE4A001AF568 /* left hand comic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 273271EC1DABFE4A001AF568 /* left hand comic.ttf */; };
-		273271EF1DAD21E2001AF568 /* bg-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 273271EE1DAD21E2001AF568 /* bg-red.png */; };
+		273271F11DAD3599001AF568 /* bg-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 273271F01DAD3599001AF568 /* bg-blue.png */; };
+		273272011DAD4225001AF568 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272001DAD4225001AF568 /* Buttons.swift */; };
+		273272051DAD4A0B001AF568 /* ChracterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		273271D21DABE705001AF568 /* CharacterQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273271D51DABE705001AF568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		273271D71DABE705001AF568 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		273271D71DABE705001AF568 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		273271DA1DABE705001AF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		273271DC1DABE705001AF568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		273271DF1DABE705001AF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		273271E11DABE705001AF568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		273271E71DABFE16001AF568 /* FunnyKid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FunnyKid.ttf; sourceTree = "<group>"; };
-		273271EC1DABFE4A001AF568 /* left hand comic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "left hand comic.ttf"; sourceTree = "<group>"; };
-		273271EE1DAD21E2001AF568 /* bg-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-red.png"; sourceTree = "<group>"; };
+		273271F01DAD3599001AF568 /* bg-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-blue.png"; sourceTree = "<group>"; };
+		273272001DAD4225001AF568 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChracterData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +60,16 @@
 		273271D41DABE705001AF568 /* CharacterQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				273272021DAD44F3001AF568 /* Model */,
+				273271F21DAD374A001AF568 /* VIew */,
+				273271F31DAD3757001AF568 /* Controller */,
 				273271E91DABFE1A001AF568 /* Resources */,
 				273271D51DABE705001AF568 /* AppDelegate.swift */,
-				273271D71DABE705001AF568 /* ViewController.swift */,
+				273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */,
 				273271D91DABE705001AF568 /* Main.storyboard */,
 				273271DC1DABE705001AF568 /* Assets.xcassets */,
 				273271DE1DABE705001AF568 /* LaunchScreen.storyboard */,
 				273271E11DABE705001AF568 /* Info.plist */,
-				273271EE1DAD21E2001AF568 /* bg-red.png */,
 			);
 			path = CharacterQuiz;
 			sourceTree = "<group>";
@@ -75,10 +77,32 @@
 		273271E91DABFE1A001AF568 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				273271EC1DABFE4A001AF568 /* left hand comic.ttf */,
-				273271E71DABFE16001AF568 /* FunnyKid.ttf */,
+				273271F01DAD3599001AF568 /* bg-blue.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		273271F21DAD374A001AF568 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				273272001DAD4225001AF568 /* Buttons.swift */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		273271F31DAD3757001AF568 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				273271D71DABE705001AF568 /* AboutViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		273272021DAD44F3001AF568 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,11 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273271E81DABFE16001AF568 /* FunnyKid.ttf in Resources */,
 				273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */,
 				273271DD1DABE705001AF568 /* Assets.xcassets in Resources */,
-				273271ED1DABFE4A001AF568 /* left hand comic.ttf in Resources */,
-				273271EF1DAD21E2001AF568 /* bg-red.png in Resources */,
+				273271F11DAD3599001AF568 /* bg-blue.png in Resources */,
 				273271DB1DABE705001AF568 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273271D81DABE705001AF568 /* ViewController.swift in Sources */,
+				273271D81DABE705001AF568 /* AboutViewController.swift in Sources */,
 				273271D61DABE705001AF568 /* AppDelegate.swift in Sources */,
+				273272011DAD4225001AF568 /* Buttons.swift in Sources */,
+				273272051DAD4A0B001AF568 /* ChracterData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +345,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */,
+			);
+			currentVersion = 273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */;
+			path = ChracterData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 273271CA1DABE705001AF568 /* Project object */;
 }

@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="kOz-tc-CB4">
             <objects>
-                <viewController id="Ti0-Zk-2wS" sceneMemberID="viewController">
+                <viewController id="Ti0-Zk-2wS" customClass="AboutViewController" customModule="CharacterQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cqj-NP-He4"/>
                         <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
@@ -41,7 +41,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-mY-zfY">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superheroes-Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Ut-Lk8"/>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                         <color key="backgroundColor" red="0.32156862745098036" green="0.70196078431372544" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="6bg-KE-7Vk"/>
@@ -51,6 +51,9 @@
                                         <state key="normal" title="SHARE YOUR SCORE">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareScorePressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="LDb-XU-VnB"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current top score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-R8-jix">
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
@@ -78,7 +81,7 @@
                                     <constraint firstItem="9lP-s9-YlJ" firstAttribute="centerX" secondItem="Fau-mY-zfY" secondAttribute="centerX" id="vYk-nh-4Zv"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-DJ-itD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-DJ-itD" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.52941176470588236" green="0.82745098039215681" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ftD-Kd-1vJ"/>
@@ -88,8 +91,11 @@
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="inr-aG-j5h" kind="show" id="gFs-ax-LyI"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-4Z-dri">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-4Z-dri" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.9137254901960784" green="0.83137254901960778" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Rlg-nq-HEO"/>
@@ -99,13 +105,16 @@
                                 <state key="normal" title="How to Play">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="howToPlayPressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="TXa-Sh-mBz"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9nm-dw-XSD">
                                     <frame key="frameInset"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-90-rue">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-90-rue" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-lr-wF2">
                                                     <subviews>
@@ -140,7 +149,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siq-rx-y7T">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siq-rx-y7T" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="WNh-SR-qfJ"/>
                                                         <constraint firstAttribute="height" constant="40" id="mHC-mM-5Se"/>
@@ -150,6 +159,9 @@
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="closeHowToPlayPressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="eyk-ME-Ccp"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,14 +211,55 @@
                             <constraint firstItem="Ek2-25-Ii0" firstAttribute="top" secondItem="Un0-Pg-kGc" secondAttribute="bottom" constant="23" id="yOr-kn-MZS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="dzd-98-rCz" id="FHz-OA-VpC"/>
+                        <outlet property="howToPlayView" destination="dgl-90-rue" id="IjN-4f-3Xe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2266.875" y="68.661971830985919"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gex-bG-l8C">
+            <objects>
+                <viewController id="inr-aG-j5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AlK-XG-Hnl"/>
+                        <viewControllerLayoutGuide type="bottom" id="NBd-Ey-gXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j0t-xg-eUe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-orange" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-kP-1uI"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="o15" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-KE-moX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="CtV-m2-LC0"/>
+                                    <constraint firstAttribute="width" constant="175" id="Lrv-XX-cRY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mX8-kP-1uI" firstAttribute="leading" secondItem="j0t-xg-eUe" secondAttribute="leading" id="5Oj-37-dAf"/>
+                            <constraint firstItem="mX8-kP-1uI" firstAttribute="top" secondItem="j0t-xg-eUe" secondAttribute="top" id="90e-IT-2lW"/>
+                            <constraint firstItem="xc6-KE-moX" firstAttribute="centerX" secondItem="j0t-xg-eUe" secondAttribute="centerX" id="CzE-Bb-xVM"/>
+                            <constraint firstItem="xc6-KE-moX" firstAttribute="top" secondItem="AlK-XG-Hnl" secondAttribute="bottom" constant="35" id="GCf-8a-ZIT"/>
+                            <constraint firstAttribute="trailing" secondItem="mX8-kP-1uI" secondAttribute="trailing" id="JTh-C4-Yth"/>
+                            <constraint firstItem="NBd-Ey-gXt" firstAttribute="top" secondItem="mX8-kP-1uI" secondAttribute="bottom" id="NaI-PU-Bug"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ow0-PR-1CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3016.875" y="72.887323943661968"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Superheroes-Silhouette" width="970" height="545"/>
         <image name="bg-blue" width="400" height="450"/>
+        <image name="bg-orange" width="400" height="450"/>
+        <image name="o15" width="200" height="250"/>
     </resources>
 </document>
