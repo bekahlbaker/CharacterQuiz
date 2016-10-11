@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FunnyKid.ttf</string>
+		<string>left hand comic.ttf</string>
+	</array>
 </dict>
 </plist>

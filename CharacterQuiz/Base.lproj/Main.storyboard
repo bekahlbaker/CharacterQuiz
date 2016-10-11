@@ -1,26 +1,212 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ti0-Zk-2wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="kOz-tc-CB4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ti0-Zk-2wS" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Cqj-NP-He4"/>
+                        <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-hQ-hJe"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Un0-Pg-kGc">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comic-quiz.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-tC-bKg">
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="35"/>
+                                        <color key="textColor" red="0.32156862745098042" green="0.70196078431372544" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rIb-tC-bKg" firstAttribute="centerX" secondItem="Un0-Pg-kGc" secondAttribute="centerX" id="Bn8-KA-DeI"/>
+                                    <constraint firstItem="rIb-tC-bKg" firstAttribute="top" secondItem="Un0-Pg-kGc" secondAttribute="top" constant="8" id="oLu-zt-sj8"/>
+                                    <constraint firstAttribute="height" constant="60" id="rYq-eW-MBW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your knowledge of DC and Marvel characters." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-25-Ii0">
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-mY-zfY">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superheroes-Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Ut-Lk8"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD">
+                                        <color key="backgroundColor" red="0.32156862745098036" green="0.70196078431372544" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="6bg-KE-7Vk"/>
+                                            <constraint firstAttribute="height" constant="25" id="pT6-1B-NDk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="17"/>
+                                        <state key="normal" title="SHARE YOUR SCORE">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current top score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-R8-jix">
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-s9-YlJ">
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VMe-Ux-pQD" secondAttribute="bottom" constant="8" id="5N9-bs-Wic"/>
+                                    <constraint firstItem="ohF-Ut-Lk8" firstAttribute="top" secondItem="Fau-mY-zfY" secondAttribute="top" id="78m-re-d3Y"/>
+                                    <constraint firstItem="zKB-R8-jix" firstAttribute="centerX" secondItem="Fau-mY-zfY" secondAttribute="centerX" id="8Jg-Fp-U0S"/>
+                                    <constraint firstItem="9lP-s9-YlJ" firstAttribute="centerY" secondItem="Fau-mY-zfY" secondAttribute="centerY" id="9sT-H8-3SH"/>
+                                    <constraint firstItem="VMe-Ux-pQD" firstAttribute="centerX" secondItem="Fau-mY-zfY" secondAttribute="centerX" id="NlY-yc-trH"/>
+                                    <constraint firstAttribute="bottom" secondItem="ohF-Ut-Lk8" secondAttribute="bottom" id="Zoa-5X-a6z"/>
+                                    <constraint firstItem="zKB-R8-jix" firstAttribute="top" secondItem="Fau-mY-zfY" secondAttribute="top" constant="8" id="bHo-WD-GRO"/>
+                                    <constraint firstAttribute="height" constant="150" id="eIO-Zg-8My"/>
+                                    <constraint firstItem="ohF-Ut-Lk8" firstAttribute="leading" secondItem="Fau-mY-zfY" secondAttribute="leading" id="ldD-tm-A6V"/>
+                                    <constraint firstAttribute="trailing" secondItem="ohF-Ut-Lk8" secondAttribute="trailing" id="ltG-Eb-eIa"/>
+                                    <constraint firstItem="9lP-s9-YlJ" firstAttribute="centerX" secondItem="Fau-mY-zfY" secondAttribute="centerX" id="vYk-nh-4Zv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-DJ-itD">
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.82745098039215681" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ftD-Kd-1vJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="pKC-9M-QB9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="60"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-4Z-dri">
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.83137254901960778" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Rlg-nq-HEO"/>
+                                    <constraint firstAttribute="width" constant="185" id="m4o-NZ-TfI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
+                                <state key="normal" title="How to Play">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9nm-dw-XSD">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-90-rue">
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-lr-wF2">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's how it works:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uty-ee-g2e">
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z79-Zj-xRB">
+                                                            <string key="text">You will be presented with the headshots of 39 different DC &amp; Marvel Comic superheroes and villains. Beneath each headshot is a place for you to enter the name of the character. Enter as many as you can and see how you score at the end!
+(Remember, this fan tribute just for fun, so don’t get too upset if you can’t get them all - or if one of your favorites was left out.)</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See how you rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQX-51-jyo">
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyu-ob-sWc">
+                                                            <string key="text">0 : ignorant
+1 - 7 : novice
+8 - 16 : apprentice
+17 - 24 : intermediate
+25 - 32 : advanced
+33 - 38 : master
+39 : expert</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siq-rx-y7T">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="WNh-SR-qfJ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="mHC-mM-5Se"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <state key="normal" title="x">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="siq-rx-y7T" secondAttribute="trailing" constant="8" id="4Bg-I9-POr"/>
+                                                <constraint firstAttribute="trailing" secondItem="8IM-lr-wF2" secondAttribute="trailing" constant="10" id="ACb-NU-5RL"/>
+                                                <constraint firstItem="siq-rx-y7T" firstAttribute="top" secondItem="dgl-90-rue" secondAttribute="top" constant="8" id="AzJ-Ss-RUi"/>
+                                                <constraint firstAttribute="width" constant="270" id="Dwe-rk-hAm"/>
+                                                <constraint firstItem="8IM-lr-wF2" firstAttribute="centerY" secondItem="dgl-90-rue" secondAttribute="centerY" id="JOP-mN-PkE"/>
+                                                <constraint firstAttribute="height" constant="450" id="UOV-el-lM6"/>
+                                                <constraint firstItem="8IM-lr-wF2" firstAttribute="leading" secondItem="dgl-90-rue" secondAttribute="leading" constant="10" id="wnC-IX-eLe"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dgl-90-rue" firstAttribute="centerX" secondItem="9nm-dw-XSD" secondAttribute="centerX" id="02H-GR-We1"/>
+                                        <constraint firstItem="dgl-90-rue" firstAttribute="centerY" secondItem="9nm-dw-XSD" secondAttribute="centerY" id="NA3-Sb-7Th"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vWw-DJ-itD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="1gJ-vH-egk"/>
+                            <constraint firstItem="Ek2-25-Ii0" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="28p-gs-RNX"/>
+                            <constraint firstAttribute="trailing" secondItem="Fau-mY-zfY" secondAttribute="trailing" id="33O-FL-I1t"/>
+                            <constraint firstItem="zeu-hQ-hJe" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="8w1-ui-hRq"/>
+                            <constraint firstItem="Fau-mY-zfY" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="Cba-0L-Tei"/>
+                            <constraint firstItem="zeu-hQ-hJe" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="DvZ-0k-nZY"/>
+                            <constraint firstItem="vWw-DJ-itD" firstAttribute="top" secondItem="Fau-mY-zfY" secondAttribute="bottom" constant="45" id="FCg-a9-eUD"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="GW7-dS-yKb"/>
+                            <constraint firstItem="hx2-KS-EZD" firstAttribute="top" secondItem="dzd-98-rCz" secondAttribute="bottom" id="HaD-7v-Huo"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="KbM-9f-HzU"/>
+                            <constraint firstItem="hx2-KS-EZD" firstAttribute="top" secondItem="zeu-hQ-hJe" secondAttribute="bottom" id="W6y-Fa-aag"/>
+                            <constraint firstAttribute="trailing" secondItem="Ek2-25-Ii0" secondAttribute="trailing" constant="10" id="Y17-LU-acw"/>
+                            <constraint firstAttribute="trailing" secondItem="Fau-mY-zfY" secondAttribute="trailing" id="csz-by-ie9"/>
+                            <constraint firstAttribute="trailing" secondItem="zeu-hQ-hJe" secondAttribute="trailing" id="hHl-mb-M3O"/>
+                            <constraint firstItem="Un0-Pg-kGc" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="hSa-Of-14r"/>
+                            <constraint firstItem="nFj-4Z-dri" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="jIT-qc-8xn"/>
+                            <constraint firstAttribute="trailing" secondItem="Un0-Pg-kGc" secondAttribute="trailing" id="pjg-XN-ihZ"/>
+                            <constraint firstItem="Un0-Pg-kGc" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="pla-u6-Hrc"/>
+                            <constraint firstItem="Ek2-25-Ii0" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" constant="10" id="rxt-uT-Vwy"/>
+                            <constraint firstItem="nFj-4Z-dri" firstAttribute="top" secondItem="Ek2-25-Ii0" secondAttribute="bottom" constant="35" id="uT4-8F-jhB"/>
+                            <constraint firstAttribute="trailing" secondItem="dzd-98-rCz" secondAttribute="trailing" id="v4v-FQ-bRh"/>
+                            <constraint firstItem="Fau-mY-zfY" firstAttribute="top" secondItem="nFj-4Z-dri" secondAttribute="bottom" constant="34" id="w6r-2t-EXh"/>
+                            <constraint firstItem="Ek2-25-Ii0" firstAttribute="top" secondItem="Un0-Pg-kGc" secondAttribute="bottom" constant="23" id="yOr-kn-MZS"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2266.875" y="68.661971830985919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Superheroes-Silhouette" width="970" height="545"/>
+        <image name="bg-blue" width="400" height="450"/>
+    </resources>
 </document>
