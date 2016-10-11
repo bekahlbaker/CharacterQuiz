@@ -14,7 +14,8 @@
 		273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273271DE1DABE705001AF568 /* LaunchScreen.storyboard */; };
 		273271F11DAD3599001AF568 /* bg-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 273271F01DAD3599001AF568 /* bg-blue.png */; };
 		273272011DAD4225001AF568 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272001DAD4225001AF568 /* Buttons.swift */; };
-		273272051DAD4A0B001AF568 /* ChracterData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */; };
+		273272091DAD5357001AF568 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272081DAD5357001AF568 /* GameViewController.swift */; };
+		2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732720C1DAD71D1001AF568 /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		273271E11DABE705001AF568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273271F01DAD3599001AF568 /* bg-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-blue.png"; sourceTree = "<group>"; };
 		273272001DAD4225001AF568 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChracterData.xcdatamodel; sourceTree = "<group>"; };
+		273272081DAD5357001AF568 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2732720C1DAD71D1001AF568 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,6 @@
 				273271F31DAD3757001AF568 /* Controller */,
 				273271E91DABFE1A001AF568 /* Resources */,
 				273271D51DABE705001AF568 /* AppDelegate.swift */,
-				273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */,
 				273271D91DABE705001AF568 /* Main.storyboard */,
 				273271DC1DABE705001AF568 /* Assets.xcassets */,
 				273271DE1DABE705001AF568 /* LaunchScreen.storyboard */,
@@ -94,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				273271D71DABE705001AF568 /* AboutViewController.swift */,
+				273272081DAD5357001AF568 /* GameViewController.swift */,
+				2732720C1DAD71D1001AF568 /* ScoreViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,8 +183,9 @@
 			files = (
 				273271D81DABE705001AF568 /* AboutViewController.swift in Sources */,
 				273271D61DABE705001AF568 /* AppDelegate.swift in Sources */,
+				2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */,
 				273272011DAD4225001AF568 /* Buttons.swift in Sources */,
-				273272051DAD4A0B001AF568 /* ChracterData.xcdatamodeld in Sources */,
+				273272091DAD5357001AF568 /* GameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,19 +349,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		273272031DAD4A0B001AF568 /* ChracterData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */,
-			);
-			currentVersion = 273272041DAD4A0B001AF568 /* ChracterData.xcdatamodel */;
-			path = ChracterData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 273271CA1DABE705001AF568 /* Project object */;
 }
