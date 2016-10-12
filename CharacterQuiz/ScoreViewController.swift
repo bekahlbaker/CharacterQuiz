@@ -68,9 +68,3 @@ class ScoreViewController: UIViewController {
         }
     }
 }
-
-//Enter in character bio
-
-//AppIcon
-
-//Deadpool?

@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-hQ-hJe"/>
@@ -232,7 +232,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NBd-Ey-gXt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j0t-xg-eUe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-purple" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-kP-1uI">
@@ -263,14 +263,6 @@
                                     <action selector="submitPressed:" destination="inr-aG-j5h" eventType="touchUpInside" id="Axf-2T-ohd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av6-xX-shj">
-                                <frame key="frameInset" minX="16" minY="315" width="288" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Batman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 (May 1939). Originally named the "Bat-Man", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoV-TV-LFg" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
                                 <frame key="frameInset" minX="87" minY="517" width="143" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +275,14 @@
                                     <action selector="nextSkipPressed:" destination="inr-aG-j5h" eventType="touchUpInside" id="4yB-R2-T2x"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-3D-xQK">
+                                <frame key="frameInset" minX="16" minY="315" width="288" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -295,7 +295,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bioLbl" destination="av6-xX-shj" id="jly-80-Wyz"/>
+                        <outlet property="bioLbl" destination="Tth-3D-xQK" id="lm4-Sl-BBO"/>
                         <outlet property="guessTextField" destination="L1G-1R-Pe7" id="ya3-Ob-ZRC"/>
                         <outlet property="headshotImg" destination="xc6-KE-moX" id="bBv-Z8-vdN"/>
                         <outlet property="nextSkipButton" destination="zoV-TV-LFg" id="p3u-og-qcY"/>
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow0-PR-1CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3016.875" y="72.887323943661968"/>
+            <point key="canvasLocation" x="3015" y="71.83098591549296"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="peU-WJ-uPE">
@@ -316,7 +316,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GQd-a0-r7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2e-Yh-YWb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="ERh-cD-qB4"/>

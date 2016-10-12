@@ -39,6 +39,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                 nextSkipButton.nextButton()
                 GameData.currentScore += 1
                 
+                bioLbl.isHidden = false
                 bioLbl.text = bios[currentGuess]
                 
             } else {
@@ -49,7 +50,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    @IBOutlet weak var bioLbl: UILabel!
+
+    @IBOutlet weak var bioLbl: UITextView!
     
     @IBOutlet weak var nextSkipButton: Buttons!
     
@@ -68,6 +70,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             submitButton.normalButton()
             nextSkipButton.skipButton()
             guessTextField.text = ""
+            bioLbl.isHidden = true
             bioLbl.text = ""
             headshotImg.image = UIImage(named: "headshot\(headshotImageCurrent)")
             headshotImageCurrent += 1
@@ -90,6 +93,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         guessTextField.text = ""
         headshotImg.image = UIImage(named: "headshot1")
         bioLbl.text = ""
+        bioLbl.isHidden = true
         
         guessTextField.returnKeyType = UIReturnKeyType.done
         
