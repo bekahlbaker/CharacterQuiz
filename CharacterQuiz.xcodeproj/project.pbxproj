@@ -16,6 +16,7 @@
 		273272011DAD4225001AF568 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272001DAD4225001AF568 /* Buttons.swift */; };
 		273272091DAD5357001AF568 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272081DAD5357001AF568 /* GameViewController.swift */; };
 		2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732720C1DAD71D1001AF568 /* ScoreViewController.swift */; };
+		273272111DAE7735001AF568 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272101DAE7735001AF568 /* GameData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		273272001DAD4225001AF568 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		273272081DAD5357001AF568 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2732720C1DAD71D1001AF568 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		273272101DAE7735001AF568 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		273272021DAD44F3001AF568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				273272101DAE7735001AF568 /* GameData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				273271D81DABE705001AF568 /* AboutViewController.swift in Sources */,
+				273272111DAE7735001AF568 /* GameData.swift in Sources */,
 				273271D61DABE705001AF568 /* AppDelegate.swift in Sources */,
 				2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */,
 				273272011DAD4225001AF568 /* Buttons.swift in Sources */,

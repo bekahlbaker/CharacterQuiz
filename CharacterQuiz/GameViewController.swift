@@ -8,15 +8,11 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
-    
-    var answerArray = ["flash", "penguin", "clayface", "spiderman", "deadpool", "antman", "electro", "twoface"]
+class GameViewController: UIViewController, UITextFieldDelegate {
     
     var headshotImageCurrent = 2
     
     var currentGuess = 0
-    
-    var correctAnswers = 0
     
     @IBOutlet weak var headshotImg: UIImageView!
     
@@ -25,20 +21,21 @@ class GameViewController: UIViewController {
     @IBOutlet weak var submitButton: Buttons!
     @IBAction func submitPressed(_ sender: Buttons) {
         
-        if currentGuess <= answerArray.count {
+         if currentGuess < GameData.characterArray.count {
             
-            if guessTextField.text?.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "") == answerArray[currentGuess] {
+            if guessTextField.text?.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "the", with: "").replacingOccurrences(of: ".", with: "") == GameData.characterArray[currentGuess] {
                 
+                view.endEditing(true)
                 submitButton.correctButton()
                 nextSkipButton.nextButton()
-                correctAnswers += 1
+                GameData.currentScore += 1
                 
             } else {
                 
+                view.endEditing(true)
                 submitButton.incorrectButton()
             }
         }
-       
     }
 
     @IBOutlet weak var bioLbl: UILabel!
@@ -47,7 +44,7 @@ class GameViewController: UIViewController {
     
     @IBAction func nextSkipPressed(_ sender: Buttons) {
         
-        if currentGuess <= answerArray.count {
+        if currentGuess < GameData.characterArray.count - 1 {
             
             currentGuess += 1
             submitButton.normalButton()
@@ -55,6 +52,11 @@ class GameViewController: UIViewController {
             guessTextField.text = ""
             headshotImg.image = UIImage(named: "headshot\(headshotImageCurrent)")
             headshotImageCurrent += 1
+            guessTextField.becomeFirstResponder()
+            
+        } else if currentGuess >= GameData.characterArray.count - 1 {
+            
+            performSegue(withIdentifier: "toScoreViewController", sender: nil)
         }
     
     }
@@ -62,11 +64,21 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guessTextField.becomeFirstResponder()
         submitButton.normalButton()
         nextSkipButton.skipButton()
         guessTextField.text = ""
         headshotImg.image = UIImage(named: "headshot1")
-    
+        
+        guessTextField.returnKeyType = UIReturnKeyType.done
+        
+        self.guessTextField.delegate = self
+        
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
 }

@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-hQ-hJe"/>
@@ -213,7 +213,10 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="dzd-98-rCz" id="FHz-OA-VpC"/>
+                        <outlet property="currentHighScoreLbl" destination="9lP-s9-YlJ" id="4dr-1K-2N4"/>
                         <outlet property="howToPlayView" destination="dgl-90-rue" id="IjN-4f-3Xe"/>
+                        <outlet property="shareScoreBtn" destination="VMe-Ux-pQD" id="gTl-Pv-rPB"/>
+                        <outlet property="yourCurrentScoreLbl" destination="zKB-R8-jix" id="Clx-Uy-8qL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +232,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NBd-Ey-gXt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j0t-xg-eUe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-purple" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-kP-1uI">
@@ -241,7 +244,7 @@
                                     <constraint firstAttribute="width" constant="175" id="Lrv-XX-cRY"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your guess..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-1R-Pe7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your guess..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-1R-Pe7">
                                 <frame key="frameInset" minX="36" minY="238" width="249" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -297,6 +300,7 @@
                         <outlet property="headshotImg" destination="xc6-KE-moX" id="bBv-Z8-vdN"/>
                         <outlet property="nextSkipButton" destination="zoV-TV-LFg" id="p3u-og-qcY"/>
                         <outlet property="submitButton" destination="x6v-jv-ooZ" id="rfJ-NK-a1z"/>
+                        <segue destination="gYN-OI-Ajg" kind="show" identifier="toScoreViewController" id="dQ6-oy-ANT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow0-PR-1CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,13 +310,13 @@
         <!--Score View Controller-->
         <scene sceneID="peU-WJ-uPE">
             <objects>
-                <viewController id="gYN-OI-Ajg" customClass="ScoreViewController" sceneMemberID="viewController">
+                <viewController id="gYN-OI-Ajg" customClass="ScoreViewController" customModule="CharacterQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6J-VG-r9B"/>
                         <viewControllerLayoutGuide type="bottom" id="GQd-a0-r7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2e-Yh-YWb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="ERh-cD-qB4"/>
@@ -361,7 +365,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playAgainPressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="cv8-ED-o1c"/>
-                                    <segue destination="Ti0-Zk-2wS" kind="show" id="YQB-qa-Bna"/>
+                                    <segue destination="Ti0-Zk-2wS" kind="show" identifier="" id="YQB-qa-Bna"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-hD-AQp" customClass="Buttons" customModule="CharacterQuiz" customModuleProvider="target">
@@ -401,13 +405,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="levelLbl" destination="Uvs-1b-IYo" id="nBk-fo-HKc"/>
+                        <outlet property="levelLbl" destination="Uvs-1b-IYo" id="o8B-nZ-mVy"/>
                         <outlet property="scoreLbl" destination="pfz-2q-zbA" id="sHx-Nu-UIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYG-Z9-aOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881.25" y="73.943661971830991"/>
+            <point key="canvasLocation" x="4306" y="43"/>
         </scene>
     </scenes>
     <resources>
