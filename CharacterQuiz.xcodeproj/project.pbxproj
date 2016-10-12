@@ -17,6 +17,7 @@
 		273272091DAD5357001AF568 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272081DAD5357001AF568 /* GameViewController.swift */; };
 		2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732720C1DAD71D1001AF568 /* ScoreViewController.swift */; };
 		273272111DAE7735001AF568 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272101DAE7735001AF568 /* GameData.swift */; };
+		273272131DAEB2A8001AF568 /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 273272121DAEB2A8001AF568 /* Characters.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		273272081DAD5357001AF568 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2732720C1DAD71D1001AF568 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		273272101DAE7735001AF568 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		273272121DAEB2A8001AF568 /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Characters.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				273272101DAE7735001AF568 /* GameData.swift */,
+				273272121DAEB2A8001AF568 /* Characters.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */,
 				273271DD1DABE705001AF568 /* Assets.xcassets in Resources */,
 				273271F11DAD3599001AF568 /* bg-blue.png in Resources */,
+				273272131DAEB2A8001AF568 /* Characters.plist in Resources */,
 				273271DB1DABE705001AF568 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

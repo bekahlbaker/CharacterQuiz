@@ -13,9 +13,6 @@ struct GameData {
     
     static var currentScore = 0
     
-    static var characterArray = ["flash", "penguin", "clayface", "spiderman", "deadpool", "antman", "electro", "twoface", "wolverine", "batman", "hawkeye", "scarecrow", "poisonivy", "venom", "cyborg", "wonderwoman", "superman", "hulk", "joker", "bizarro", "aquaman", "catgirl", "greengoblin", "mrfreeze", "lexluther", "thor", "robin", "ironman", "killercroc", "groot", "harleyquinn", "daredevil", "captainamerica",  "greenarrow", "hawkman", "drdoom", "bane", "riddler"]
 }
-
-
     
     
