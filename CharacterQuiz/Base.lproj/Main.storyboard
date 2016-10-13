@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-hQ-hJe"/>
@@ -232,7 +232,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NBd-Ey-gXt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j0t-xg-eUe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-purple" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-kP-1uI">
@@ -283,6 +283,17 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-CF-8qS">
+                                <frame key="frameInset" minX="13" minY="19" width="53" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ti0-Zk-2wS" kind="show" id="v7q-Bx-G8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -316,7 +327,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GQd-a0-r7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2e-Yh-YWb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="ERh-cD-qB4"/>
@@ -421,4 +432,7 @@
         <image name="bg-yellow" width="400" height="450"/>
         <image name="o15" width="200" height="250"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v7q-Bx-G8g"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -37,7 +37,9 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                 view.endEditing(true)
                 submitButton.correctButton()
                 nextSkipButton.nextButton()
+                
                 GameData.currentScore += 1
+                UserDefaults.standard.set(GameData.currentScore, forKey: "score")
                 
                 bioLbl.isHidden = false
                 bioLbl.text = bios[currentGuess]
@@ -75,7 +77,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             headshotImg.image = UIImage(named: "headshot\(headshotImageCurrent)")
             headshotImageCurrent += 1
             guessTextField.becomeFirstResponder()
-            
             
         } else if currentGuess >= characterArray.count - 1 {
             
