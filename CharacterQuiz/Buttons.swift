@@ -19,7 +19,7 @@ class Buttons: UIButton {
         self.layer.shadowRadius = 3.0
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
-        self.layer.shouldRasterize = true
+//        self.layer.shouldRasterize = true
     }
     
     func incorrectButton () {

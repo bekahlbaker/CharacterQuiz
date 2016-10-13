@@ -53,6 +53,7 @@ class AboutViewController: UIViewController {
     
     @IBOutlet weak var yourCurrentScoreLbl: UILabel!
     @IBOutlet weak var currentHighScoreLbl: UILabel!
+    @IBOutlet weak var levelLbl: UILabel!
     @IBOutlet weak var shareScoreBtn: Buttons!
     @IBAction func shareScorePressed(_ sender: Buttons) {
         

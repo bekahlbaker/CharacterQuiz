@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CharacterQuiz.xcodeproj">
+      location = "self:/Users/rebekahbaker/Code/Comic-Quiz.com/Comic-Quiz.com.xcodeproj">
    </FileRef>
 </Workspace>

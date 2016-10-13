@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		273271D21DABE705001AF568 /* CharacterQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273271D21DABE705001AF568 /* Comic-Quiz.com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comic-Quiz.com.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		273271D51DABE705001AF568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		273271D71DABE705001AF568 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		273271DA1DABE705001AF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		273271C91DABE705001AF568 = {
 			isa = PBXGroup;
 			children = (
-				273271D41DABE705001AF568 /* CharacterQuiz */,
+				273271D41DABE705001AF568 /* Comic-Quiz.com */,
 				273271D31DABE705001AF568 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		273271D31DABE705001AF568 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				273271D21DABE705001AF568 /* CharacterQuiz.app */,
+				273271D21DABE705001AF568 /* Comic-Quiz.com.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		273271D41DABE705001AF568 /* CharacterQuiz */ = {
+		273271D41DABE705001AF568 /* Comic-Quiz.com */ = {
 			isa = PBXGroup;
 			children = (
 				273272021DAD44F3001AF568 /* Model */,
@@ -76,6 +76,7 @@
 				273271DE1DABE705001AF568 /* LaunchScreen.storyboard */,
 				273271E11DABE705001AF568 /* Info.plist */,
 			);
+			name = "Comic-Quiz.com";
 			path = CharacterQuiz;
 			sourceTree = "<group>";
 		};
@@ -117,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		273271D11DABE705001AF568 /* CharacterQuiz */ = {
+		273271D11DABE705001AF568 /* Comic-Quiz.com */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 273271E41DABE705001AF568 /* Build configuration list for PBXNativeTarget "CharacterQuiz" */;
+			buildConfigurationList = 273271E41DABE705001AF568 /* Build configuration list for PBXNativeTarget "Comic-Quiz.com" */;
 			buildPhases = (
 				273271CE1DABE705001AF568 /* Sources */,
 				273271CF1DABE705001AF568 /* Frameworks */,
@@ -129,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = CharacterQuiz;
+			name = "Comic-Quiz.com";
 			productName = CharacterQuiz;
-			productReference = 273271D21DABE705001AF568 /* CharacterQuiz.app */;
+			productReference = 273271D21DABE705001AF568 /* Comic-Quiz.com.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 273271CD1DABE705001AF568 /* Build configuration list for PBXProject "CharacterQuiz" */;
+			buildConfigurationList = 273271CD1DABE705001AF568 /* Build configuration list for PBXProject "Comic-Quiz.com" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -164,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				273271D11DABE705001AF568 /* CharacterQuiz */,
+				273271D11DABE705001AF568 /* Comic-Quiz.com */,
 			);
 		};
 /* End PBXProject section */
@@ -346,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		273271CD1DABE705001AF568 /* Build configuration list for PBXProject "CharacterQuiz" */ = {
+		273271CD1DABE705001AF568 /* Build configuration list for PBXProject "Comic-Quiz.com" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273271E21DABE705001AF568 /* Debug */,
@@ -355,13 +356,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		273271E41DABE705001AF568 /* Build configuration list for PBXNativeTarget "CharacterQuiz" */ = {
+		273271E41DABE705001AF568 /* Build configuration list for PBXNativeTarget "Comic-Quiz.com" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				273271E51DABE705001AF568 /* Debug */,
 				273271E61DABE705001AF568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
