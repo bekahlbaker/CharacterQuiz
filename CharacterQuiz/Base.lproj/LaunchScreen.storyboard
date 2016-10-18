@@ -15,33 +15,43 @@
                         <viewControllerLayoutGuide type="bottom" id="uIi-WI-F3i"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iwq-iM-KOg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-blue" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-Lx-825"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90L-Iq-1gT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="wwM-rT-eyr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNO-Nj-7IS">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2K6-Mn-Pdj"/>
+                                    <constraint firstAttribute="width" constant="180" id="Gjs-Nh-PHz"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comic-quiz.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykJ-sp-HNa">
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="35"/>
-                                <color key="textColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5hh-Lx-825" firstAttribute="top" secondItem="Iwq-iM-KOg" secondAttribute="top" id="3hA-5G-lSb"/>
-                            <constraint firstItem="uIi-WI-F3i" firstAttribute="top" secondItem="5hh-Lx-825" secondAttribute="bottom" id="HcP-AC-Igu"/>
-                            <constraint firstItem="5hh-Lx-825" firstAttribute="leading" secondItem="Iwq-iM-KOg" secondAttribute="leading" id="UIz-iI-hb8"/>
-                            <constraint firstItem="ykJ-sp-HNa" firstAttribute="centerY" secondItem="Iwq-iM-KOg" secondAttribute="centerY" id="WQu-aC-Y14"/>
-                            <constraint firstItem="ykJ-sp-HNa" firstAttribute="centerX" secondItem="Iwq-iM-KOg" secondAttribute="centerX" id="uh6-dw-xLa"/>
-                            <constraint firstAttribute="trailing" secondItem="5hh-Lx-825" secondAttribute="trailing" id="z9Y-sS-Lwi"/>
+                            <constraint firstItem="ykJ-sp-HNa" firstAttribute="centerX" secondItem="pNO-Nj-7IS" secondAttribute="centerX" id="6Ta-rU-cCd"/>
+                            <constraint firstAttribute="trailing" secondItem="90L-Iq-1gT" secondAttribute="trailing" id="7Sh-yR-Xw4"/>
+                            <constraint firstItem="pNO-Nj-7IS" firstAttribute="centerX" secondItem="Iwq-iM-KOg" secondAttribute="centerX" id="JGR-Wv-O9J"/>
+                            <constraint firstItem="uIi-WI-F3i" firstAttribute="top" secondItem="90L-Iq-1gT" secondAttribute="bottom" id="VnW-I7-rk5"/>
+                            <constraint firstItem="ykJ-sp-HNa" firstAttribute="centerY" secondItem="pNO-Nj-7IS" secondAttribute="centerY" id="dIz-nW-YOI"/>
+                            <constraint firstItem="90L-Iq-1gT" firstAttribute="leading" secondItem="Iwq-iM-KOg" secondAttribute="leading" id="nk5-W8-TZC"/>
+                            <constraint firstItem="uIi-WI-F3i" firstAttribute="top" secondItem="pNO-Nj-7IS" secondAttribute="bottom" constant="220" id="xkV-9k-yp7"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mah-0g-hhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58.125" y="330.63380281690144"/>
+            <point key="canvasLocation" x="58.125" y="330"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bg-blue" width="400" height="450"/>
-    </resources>
 </document>

@@ -96,7 +96,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-s9-YlJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-s9-YlJ">
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apprentice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auF-ak-BZD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auF-ak-BZD">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="v8a-tx-HtW"/>
                                 </constraints>
@@ -121,58 +121,61 @@
                                     <constraint firstAttribute="height" constant="1" id="mcf-aG-uqS"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="9nm-dw-XSD">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9nm-dw-XSD">
                                     <frame key="frameInset"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's how it works:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-Dl-hsz">
-                                            <frame key="frameInset" minY="59" width="375" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's how it works:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-Dl-hsz">
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See how you rate:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKX-1O-MHx">
-                                            <frame key="frameInset" minY="372.5" width="375" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See how you rate:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKX-1O-MHx">
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-GP-lUp">
-                                            <frame key="frameInset" minX="32" minY="110" width="311" height="232.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-GP-lUp">
                                             <string key="text">You will be presented with the headshots of 39 different DC &amp; Marvel Comic superheroes and villains. Beneath each headshot is a place for you to enter the name of the character. Enter as many as you can and see how you score at the end! (Remember, this fan tribute is free and just for fun, so don’t get too upset if you can’t get them all - or if one of your favorites was left out.)</string>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-JV-0F2">
-                                            <frame key="frameInset" minX="32" minY="423.5" width="311" height="163"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <string key="text">0 : ignorant
-1 - 7 : novice
-8 - 16 : apprentice
-17 - 24 : intermediate
-25 - 32 : advanced
-33 - 38 : master
-39 : expert</string>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-JV-0F2">
+                                            <string key="text">0 - 5 : ignorant
+6 - 10 : apprentice
+11 - 15 : advanced
+16 - 20 : expert</string>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-Np-58b" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                            <frame key="frameInset" minX="316" minY="34" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-Np-58b" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="aWm-Fu-lwi"/>
+                                                <constraint firstAttribute="width" constant="25" id="ihE-IK-mb5"/>
+                                            </constraints>
                                             <state key="normal" image="close"/>
                                             <connections>
                                                 <action selector="closeHowToPlayPressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="FSt-N8-oz5"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dHn-Np-58b" firstAttribute="top" secondItem="9nm-dw-XSD" secondAttribute="top" constant="34" id="0UE-hq-OXT"/>
+                                        <constraint firstItem="NzA-JV-0F2" firstAttribute="leading" secondItem="9nm-dw-XSD" secondAttribute="leading" constant="32" id="Dre-uu-87n"/>
+                                        <constraint firstAttribute="trailing" secondItem="z8G-GP-lUp" secondAttribute="trailing" constant="32" id="HnO-Js-tpG"/>
+                                        <constraint firstItem="bf3-Dl-hsz" firstAttribute="centerX" secondItem="9nm-dw-XSD" secondAttribute="centerX" id="J3f-40-KHq"/>
+                                        <constraint firstAttribute="trailing" secondItem="dHn-Np-58b" secondAttribute="trailing" constant="34" id="KXO-ZZ-tIO"/>
+                                        <constraint firstAttribute="trailing" secondItem="NzA-JV-0F2" secondAttribute="trailing" constant="32" id="Ldr-Dc-A1I"/>
+                                        <constraint firstItem="vKX-1O-MHx" firstAttribute="centerX" secondItem="z8G-GP-lUp" secondAttribute="centerX" id="V43-O5-uhd"/>
+                                        <constraint firstItem="NzA-JV-0F2" firstAttribute="top" secondItem="vKX-1O-MHx" secondAttribute="bottom" constant="20" id="XV2-lE-AYS"/>
+                                        <constraint firstItem="bf3-Dl-hsz" firstAttribute="top" secondItem="9nm-dw-XSD" secondAttribute="top" constant="59" id="muL-JY-gcu"/>
+                                        <constraint firstItem="z8G-GP-lUp" firstAttribute="top" secondItem="bf3-Dl-hsz" secondAttribute="bottom" constant="20" id="ogq-1C-U4U"/>
+                                        <constraint firstItem="vKX-1O-MHx" firstAttribute="top" secondItem="z8G-GP-lUp" secondAttribute="bottom" constant="30" id="r4U-7b-Z8e"/>
+                                        <constraint firstItem="z8G-GP-lUp" firstAttribute="leading" secondItem="9nm-dw-XSD" secondAttribute="leading" constant="32" id="tyw-9A-quY"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
@@ -189,6 +192,7 @@
                             <constraint firstItem="Ho4-3Y-kAs" firstAttribute="top" secondItem="auF-ak-BZD" secondAttribute="bottom" constant="11" id="9WH-pz-7u5"/>
                             <constraint firstAttribute="trailing" secondItem="ohF-Ut-Lk8" secondAttribute="trailing" id="D5E-oC-6eh"/>
                             <constraint firstItem="VMe-Ux-pQD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="Es4-ho-Cy8"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="GIz-zc-3Sb"/>
                             <constraint firstItem="vWw-DJ-itD" firstAttribute="top" secondItem="ohF-Ut-Lk8" secondAttribute="bottom" constant="-31" id="GON-uF-IAf"/>
                             <constraint firstItem="VMe-Ux-pQD" firstAttribute="top" secondItem="auF-ak-BZD" secondAttribute="bottom" constant="46" id="JfN-jr-LUT"/>
                             <constraint firstItem="zKB-R8-jix" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="MoH-i2-A8B"/>
@@ -197,6 +201,9 @@
                             <constraint firstItem="UZm-zB-jN4" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="X8Q-dN-w51"/>
                             <constraint firstItem="Ho4-3Y-kAs" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="cK3-O5-wSO"/>
                             <constraint firstItem="vWw-DJ-itD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="e4B-cs-2Hc"/>
+                            <constraint firstItem="hx2-KS-EZD" firstAttribute="top" secondItem="dzd-98-rCz" secondAttribute="bottom" id="iEz-0W-Xbd"/>
+                            <constraint firstAttribute="trailing" secondItem="dzd-98-rCz" secondAttribute="trailing" id="jrg-kh-qnU"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="pxv-GO-XoF"/>
                             <constraint firstItem="OdV-5t-78y" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="r19-h9-q6y"/>
                             <constraint firstItem="zKB-R8-jix" firstAttribute="top" secondItem="nFj-4Z-dri" secondAttribute="bottom" constant="23" id="xaZ-Rw-oEJ"/>
                         </constraints>
@@ -205,6 +212,7 @@
                         <outlet property="blurView" destination="dzd-98-rCz" id="FHz-OA-VpC"/>
                         <outlet property="currentHighScoreLbl" destination="9lP-s9-YlJ" id="4dr-1K-2N4"/>
                         <outlet property="howToPlayView" destination="9nm-dw-XSD" id="EvT-aj-cXk"/>
+                        <outlet property="levelAcheivedLbl" destination="OdV-5t-78y" id="wuE-3U-34p"/>
                         <outlet property="levelLbl" destination="auF-ak-BZD" id="IxA-GR-EXP"/>
                         <outlet property="shareScoreBtn" destination="VMe-Ux-pQD" id="gTl-Pv-rPB"/>
                         <outlet property="yourCurrentScoreLbl" destination="zKB-R8-jix" id="Clx-Uy-8qL"/>
@@ -212,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266.4000000000001" y="67.916041979010501"/>
+            <point key="canvasLocation" x="2265" y="67.605633802816897"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="gex-bG-l8C">
@@ -230,16 +238,17 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headshot1" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-KE-moX">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="210" id="cjU-Oi-Wug"/>
-                                            <constraint firstAttribute="height" constant="199" id="mvH-Pp-rts"/>
+                                            <constraint firstAttribute="width" constant="180" id="cjU-Oi-Wug"/>
+                                            <constraint firstAttribute="height" constant="175" id="mvH-Pp-rts"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-CF-8qS" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="m18-h8-fWi"/>
-                                            <constraint firstAttribute="width" constant="40" id="t4J-Sa-Fc9"/>
+                                            <constraint firstAttribute="width" constant="60" id="t4J-Sa-Fc9"/>
                                         </constraints>
-                                        <state key="normal" image="back"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Cancel"/>
                                         <connections>
                                             <segue destination="Ti0-Zk-2wS" kind="show" id="v7q-Bx-G8g"/>
                                         </connections>
@@ -248,8 +257,8 @@
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Kzs-CF-8qS" firstAttribute="leading" secondItem="wh9-X3-mdj" secondAttribute="leading" constant="8" id="40t-AE-wwE"/>
-                                    <constraint firstAttribute="height" constant="355" id="6gJ-bH-cqs"/>
-                                    <constraint firstItem="xc6-KE-moX" firstAttribute="centerY" secondItem="wh9-X3-mdj" secondAttribute="centerY" constant="-21" id="Kpt-Se-MGj"/>
+                                    <constraint firstAttribute="height" constant="310" id="6gJ-bH-cqs"/>
+                                    <constraint firstItem="xc6-KE-moX" firstAttribute="centerY" secondItem="wh9-X3-mdj" secondAttribute="centerY" constant="-40" id="Kpt-Se-MGj"/>
                                     <constraint firstItem="xc6-KE-moX" firstAttribute="centerX" secondItem="wh9-X3-mdj" secondAttribute="centerX" id="Num-qF-b8G"/>
                                     <constraint firstItem="Kzs-CF-8qS" firstAttribute="top" secondItem="wh9-X3-mdj" secondAttribute="top" constant="8" id="YBo-Kb-md0"/>
                                 </constraints>
@@ -299,11 +308,11 @@
                             <constraint firstItem="Tth-3D-xQK" firstAttribute="leading" secondItem="j0t-xg-eUe" secondAttribute="leadingMargin" id="EWt-Kk-x69"/>
                             <constraint firstItem="Tth-3D-xQK" firstAttribute="trailing" secondItem="j0t-xg-eUe" secondAttribute="trailingMargin" id="M0T-gR-WgR"/>
                             <constraint firstItem="x6v-jv-ooZ" firstAttribute="centerX" secondItem="j0t-xg-eUe" secondAttribute="centerX" id="UAf-3h-OJ4"/>
-                            <constraint firstItem="L1G-1R-Pe7" firstAttribute="top" secondItem="xc6-KE-moX" secondAttribute="bottom" constant="30" id="ZDf-fZ-v7E"/>
+                            <constraint firstItem="L1G-1R-Pe7" firstAttribute="top" secondItem="xc6-KE-moX" secondAttribute="bottom" constant="20" id="ZDf-fZ-v7E"/>
                             <constraint firstItem="wh9-X3-mdj" firstAttribute="leading" secondItem="j0t-xg-eUe" secondAttribute="leading" id="a4T-Pd-mLk"/>
                             <constraint firstItem="zoV-TV-LFg" firstAttribute="centerY" secondItem="j0t-xg-eUe" secondAttribute="centerY" constant="276" id="bOA-ZM-icB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L1G-1R-Pe7" secondAttribute="trailing" constant="25" id="dHs-vZ-bEP"/>
-                            <constraint firstItem="zoV-TV-LFg" firstAttribute="top" secondItem="Tth-3D-xQK" secondAttribute="bottom" constant="20" id="fH1-Ht-UkI"/>
+                            <constraint firstItem="zoV-TV-LFg" firstAttribute="top" secondItem="Tth-3D-xQK" secondAttribute="bottom" constant="10" id="fH1-Ht-UkI"/>
                             <constraint firstItem="Tth-3D-xQK" firstAttribute="top" secondItem="x6v-jv-ooZ" secondAttribute="bottom" constant="10" id="fHk-Fa-bQN"/>
                             <constraint firstItem="zoV-TV-LFg" firstAttribute="centerX" secondItem="j0t-xg-eUe" secondAttribute="centerX" id="gzJ-ZI-xKo"/>
                             <constraint firstItem="wh9-X3-mdj" firstAttribute="top" secondItem="j0t-xg-eUe" secondAttribute="top" id="tL4-qQ-qDg"/>
@@ -323,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow0-PR-1CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066.4000000000001" y="67.916041979010501"/>
+            <point key="canvasLocation" x="3065.625" y="67.5"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="peU-WJ-uPE">
@@ -408,19 +417,10 @@
                                     <segue destination="Ti0-Zk-2wS" kind="show" identifier="" id="YQB-qa-Bna"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-hD-AQp" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.91372549020000005" green="0.83137254900000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YMN-vf-w1X"/>
-                                    <constraint firstAttribute="width" constant="275" id="t2u-A2-Lmr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <state key="normal" title="SHARE YOUR SCORE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-6Z-j2w">
+                                <state key="normal" title="Play the full version at Comic-Quiz.com"/>
                                 <connections>
-                                    <action selector="shareScorePressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="7Z7-zn-KpL"/>
-                                    <action selector="shareScorePressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="NSU-vy-S9k"/>
+                                    <action selector="webViewPressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="hjx-iD-oxX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -432,13 +432,15 @@
                             <constraint firstItem="Pkb-fO-aI6" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="Ajg-9m-IkC"/>
                             <constraint firstItem="BRV-S0-CRa" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="CoL-2f-4uD"/>
                             <constraint firstItem="Uvs-1b-IYo" firstAttribute="top" secondItem="v9c-CD-q5Q" secondAttribute="bottom" constant="12.5" id="Dn9-Lb-OgU"/>
-                            <constraint firstItem="0EX-hD-AQp" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="QOa-Qo-1TU"/>
                             <constraint firstItem="v9c-CD-q5Q" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="UJN-ic-v9B"/>
+                            <constraint firstItem="GQd-a0-r7s" firstAttribute="top" secondItem="XYB-6Z-j2w" secondAttribute="bottom" constant="20" id="UvF-De-SCm"/>
+                            <constraint firstItem="XYB-6Z-j2w" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="dhx-UX-Q0V"/>
                             <constraint firstItem="Uvs-1b-IYo" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="nSN-cT-fzP"/>
                             <constraint firstItem="oOs-ij-LU8" firstAttribute="leading" secondItem="d2e-Yh-YWb" secondAttribute="leading" id="ozV-mr-1Vy"/>
-                            <constraint firstItem="Pkb-fO-aI6" firstAttribute="top" secondItem="BRV-S0-CRa" secondAttribute="bottom" constant="56" id="pod-Az-ySl"/>
+                            <constraint firstItem="Pkb-fO-aI6" firstAttribute="top" secondItem="BRV-S0-CRa" secondAttribute="bottom" constant="56" id="pod-Az-ySl">
+                                <variation key="widthClass=compact" constant="55"/>
+                            </constraint>
                             <constraint firstItem="oOs-ij-LU8" firstAttribute="top" secondItem="d2e-Yh-YWb" secondAttribute="top" id="tBD-zp-vmA"/>
-                            <constraint firstItem="0EX-hD-AQp" firstAttribute="top" secondItem="Pkb-fO-aI6" secondAttribute="bottom" constant="47" id="tUL-Ws-Igt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -453,13 +455,12 @@
     </scenes>
     <resources>
         <image name="Superheroes-Silhouette" width="970" height="545"/>
-        <image name="back" width="1000" height="1000"/>
         <image name="circle" width="256" height="256"/>
         <image name="close" width="120" height="121"/>
         <image name="headshot1" width="200" height="250"/>
         <image name="home" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YQB-qa-Bna"/>
+        <segue reference="v7q-Bx-G8g"/>
     </inferredMetricsTieBreakers>
 </document>

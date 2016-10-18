@@ -18,6 +18,7 @@
 		2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732720C1DAD71D1001AF568 /* ScoreViewController.swift */; };
 		273272111DAE7735001AF568 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272101DAE7735001AF568 /* GameData.swift */; };
 		273272131DAEB2A8001AF568 /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 273272121DAEB2A8001AF568 /* Characters.plist */; };
+		27F2122E1DB671520002366D /* Comic-Quiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27F2122C1DB671520002366D /* Comic-Quiz.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2732720C1DAD71D1001AF568 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		273272101DAE7735001AF568 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		273272121DAEB2A8001AF568 /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Characters.plist; sourceTree = "<group>"; };
+		27F2122D1DB671520002366D /* Comic-Quiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Comic-Quiz.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				273272021DAD44F3001AF568 /* Model */,
-				273271F21DAD374A001AF568 /* VIew */,
 				273271F31DAD3757001AF568 /* Controller */,
 				273271E91DABFE1A001AF568 /* Resources */,
 				273271D51DABE705001AF568 /* AppDelegate.swift */,
@@ -75,6 +76,7 @@
 				273271DC1DABE705001AF568 /* Assets.xcassets */,
 				273271DE1DABE705001AF568 /* LaunchScreen.storyboard */,
 				273271E11DABE705001AF568 /* Info.plist */,
+				27F2122C1DB671520002366D /* Comic-Quiz.xcdatamodeld */,
 			);
 			name = "Comic-Quiz.com";
 			path = CharacterQuiz;
@@ -111,6 +113,7 @@
 			children = (
 				273272101DAE7735001AF568 /* GameData.swift */,
 				273272121DAEB2A8001AF568 /* Characters.plist */,
+				273271F21DAD374A001AF568 /* VIew */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				273272111DAE7735001AF568 /* GameData.swift in Sources */,
 				273271D61DABE705001AF568 /* AppDelegate.swift in Sources */,
 				2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */,
+				27F2122E1DB671520002366D /* Comic-Quiz.xcdatamodeld in Sources */,
 				273272011DAD4225001AF568 /* Buttons.swift in Sources */,
 				273272091DAD5357001AF568 /* GameViewController.swift in Sources */,
 			);
@@ -366,6 +370,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27F2122C1DB671520002366D /* Comic-Quiz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27F2122D1DB671520002366D /* Comic-Quiz.xcdatamodel */,
+			);
+			currentVersion = 27F2122D1DB671520002366D /* Comic-Quiz.xcdatamodel */;
+			path = "Comic-Quiz.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 273271CA1DABE705001AF568 /* Project object */;
 }

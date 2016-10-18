@@ -12,7 +12,7 @@ import Foundation
 struct GameData {
     
     static var currentScore = 0
-    
+
 }
     
     

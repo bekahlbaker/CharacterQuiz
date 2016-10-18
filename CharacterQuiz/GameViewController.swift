@@ -1,14 +1,42 @@
 //
 //  GameViewController.swift
-//  CharacterQuiz
+//  Comic-Quiz.com
 //
 //  Created by Rebekah Baker on 10/11/16.
 //  Copyright © 2016 Rebekah Baker. All rights reserved.
 //
 
 import UIKit
+import CoreData
+
 
 class GameViewController: UIViewController, UITextFieldDelegate {
+    
+    var scores: [NSManagedObject] = []
+    
+    func save(highScore: Int) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Score", in: managedContext)!
+        
+        let score = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        score.setValue(highScore, forKey: "highScore")
+        
+        do{
+            
+            try managedContext.save()
+            scores.append(score)
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
     
     var headshotImageCurrent = 2
     
@@ -39,7 +67,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                 nextSkipButton.nextButton()
                 
                 GameData.currentScore += 1
-                UserDefaults.standard.set(GameData.currentScore, forKey: "score")
+
+
                 
                 bioLbl.isHidden = false
                 bioLbl.text = bios[currentGuess]
@@ -87,6 +116,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GameData.currentScore = 0
         
         guessTextField.becomeFirstResponder()
         submitButton.normalButton()
