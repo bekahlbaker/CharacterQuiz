@@ -17,15 +17,15 @@ class AboutViewController: UIViewController {
 
     @IBAction func howToPlayPressed(_ sender: UIButton) {
     
-        self.blurView.isHidden = false
-        self.howToPlayView.isHidden = false
+//        self.blurView.isHidden = false
+//        self.howToPlayView.isHidden = false
         
     }
     
     @IBAction func closeHowToPlayPressed(_ sender: UIButton) {
         
-        blurView.isHidden = true
-        howToPlayView.isHidden = true
+//        blurView.isHidden = true
+//        howToPlayView.isHidden = true
     }
     
     
@@ -54,7 +54,7 @@ class AboutViewController: UIViewController {
             
             scores = try managedContext.fetch(fetchRequest)
             
-            print(scores)
+            print("SCORES: \(scores)")
             
             if scores.count > 0 {
                 
@@ -103,8 +103,8 @@ class AboutViewController: UIViewController {
 
         
         
-        blurView.isHidden = true
-        howToPlayView.isHidden = true
+//        blurView.isHidden = true
+//        howToPlayView.isHidden = true
         
 }
     

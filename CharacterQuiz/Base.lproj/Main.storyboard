@@ -1,148 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ti0-Zk-2wS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ti0-Zk-2wS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About View Controller-->
-        <scene sceneID="kOz-tc-CB4">
+        <!--View Controller-->
+        <scene sceneID="lqT-rm-h0t">
             <objects>
-                <viewController id="Ti0-Zk-2wS" customClass="AboutViewController" customModule="Comic_Quiz_com" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n8u-Kr-LZB" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cqj-NP-He4"/>
-                        <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
+                        <viewControllerLayoutGuide type="top" id="Fjw-Zx-Vde"/>
+                        <viewControllerLayoutGuide type="bottom" id="muy-RC-sGH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="LeN-wY-vaP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZm-zB-jN4">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic-Quiz.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-WZ-zx7">
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your knowledge of DC and Marvel characters." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-25-Ii0">
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-4Z-dri" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="275" id="1mP-V8-1ZC"/>
-                                            <constraint firstAttribute="height" constant="50" id="A90-Ec-sqj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="How to Play">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="howToPlayPressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="TXa-Sh-mBz"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="fJ5-WZ-zx7" firstAttribute="leading" secondItem="UZm-zB-jN4" secondAttribute="leading" constant="8" id="7pg-hT-J1O"/>
-                                    <constraint firstItem="Ek2-25-Ii0" firstAttribute="leading" secondItem="UZm-zB-jN4" secondAttribute="leading" constant="8" id="JBK-dT-lIM"/>
-                                    <constraint firstItem="nFj-4Z-dri" firstAttribute="top" secondItem="UZm-zB-jN4" secondAttribute="top" constant="153" id="RI4-Gm-ZCx"/>
-                                    <constraint firstAttribute="height" constant="185" id="Sc3-9f-B7F"/>
-                                    <constraint firstItem="Ek2-25-Ii0" firstAttribute="top" secondItem="fJ5-WZ-zx7" secondAttribute="bottom" constant="20" id="TgJ-dw-OWF"/>
-                                    <constraint firstAttribute="trailing" secondItem="fJ5-WZ-zx7" secondAttribute="trailing" constant="8" id="cAp-un-36J"/>
-                                    <constraint firstItem="fJ5-WZ-zx7" firstAttribute="top" secondItem="UZm-zB-jN4" secondAttribute="top" constant="45" id="dsf-ie-o9C"/>
-                                    <constraint firstItem="nFj-4Z-dri" firstAttribute="centerX" secondItem="UZm-zB-jN4" secondAttribute="centerX" id="tKz-A0-e07"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ek2-25-Ii0" secondAttribute="trailing" constant="8" id="xLX-wb-YJv"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superheroes-Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Ut-Lk8">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="366" id="vcy-Zp-DUt"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-DJ-itD" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.77647058820000003" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="V48-Kj-qgO"/>
-                                    <constraint firstAttribute="height" constant="50" id="zPv-o9-8fT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
-                                <state key="normal" title="PLAY">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="inr-aG-j5h" kind="show" id="gFs-ax-LyI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.91372549020000005" green="0.83137254900000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="8jL-Wq-d6K"/>
-                                    <constraint firstAttribute="width" constant="225" id="fS9-rI-DXc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <state key="normal" title="SHARE YOUR SCORE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareScorePressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="LDb-XU-VnB"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current top score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-R8-jix">
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-s9-YlJ">
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="80"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level acheived:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-5t-78y">
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auF-ak-BZD">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="v8a-tx-HtW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho4-3Y-kAs">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="m8I-vV-VD2"/>
-                                    <constraint firstAttribute="height" constant="1" id="mcf-aG-uqS"/>
-                                </constraints>
-                            </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9nm-dw-XSD">
-                                    <frame key="frameInset"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's how it works:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-Dl-hsz">
+                                            <rect key="frame" x="89" y="59" width="197" height="30.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See how you rate:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKX-1O-MHx">
+                                            <rect key="frame" x="99.5" y="163" width="176.5" height="30.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-GP-lUp">
+                                            <rect key="frame" x="32" y="109.5" width="311" height="23.5"/>
                                             <string key="text">You will be presented with the headshots of 39 different DC &amp; Marvel Comic superheroes and villains. Beneath each headshot is a place for you to enter the name of the character. Enter as many as you can and see how you score at the end! (Remember, this fan tribute is free and just for fun, so don’t get too upset if you can’t get them all - or if one of your favorites was left out.)</string>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-JV-0F2">
+                                            <rect key="frame" x="32" y="213.5" width="311" height="93"/>
                                             <string key="text">0 - 5 : ignorant
 6 - 10 : apprentice
 11 - 15 : advanced
@@ -152,13 +58,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-Np-58b" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                            <rect key="frame" x="316" y="34" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="aWm-Fu-lwi"/>
                                                 <constraint firstAttribute="width" constant="25" id="ihE-IK-mb5"/>
                                             </constraints>
                                             <state key="normal" image="close"/>
                                             <connections>
-                                                <action selector="closeHowToPlayPressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="FSt-N8-oz5"/>
+                                                <segue destination="Ti0-Zk-2wS" kind="presentation" modalPresentationStyle="overCurrentContext" id="coV-O8-JZe"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -182,6 +89,148 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="muy-RC-sGH" firstAttribute="top" secondItem="dzd-98-rCz" secondAttribute="bottom" id="OvO-47-X1x"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="leading" secondItem="LeN-wY-vaP" secondAttribute="leading" id="SMa-Rc-eGh"/>
+                            <constraint firstAttribute="trailing" secondItem="dzd-98-rCz" secondAttribute="trailing" id="cXY-Xz-rDf"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="top" secondItem="LeN-wY-vaP" secondAttribute="top" id="wes-NB-DyC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a16-Ou-TeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="86"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="kOz-tc-CB4">
+            <objects>
+                <viewController id="Ti0-Zk-2wS" customClass="AboutViewController" customModule="Comic_Quiz_com" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cqj-NP-He4"/>
+                        <viewControllerLayoutGuide type="bottom" id="hx2-KS-EZD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fva-r9-wvg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZm-zB-jN4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic-Quiz.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-WZ-zx7">
+                                        <rect key="frame" x="8" y="45" width="359" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your knowledge of DC and Marvel characters." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-25-Ii0">
+                                        <rect key="frame" x="8" y="95.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-4Z-dri" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="153" width="275" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="275" id="1mP-V8-1ZC"/>
+                                            <constraint firstAttribute="height" constant="50" id="A90-Ec-sqj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                        <state key="normal" title="How to Play">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="n8u-Kr-LZB" kind="popoverPresentation" popoverAnchorView="nFj-4Z-dri" id="9rz-0A-sUB">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fJ5-WZ-zx7" firstAttribute="leading" secondItem="UZm-zB-jN4" secondAttribute="leading" constant="8" id="7pg-hT-J1O"/>
+                                    <constraint firstItem="Ek2-25-Ii0" firstAttribute="leading" secondItem="UZm-zB-jN4" secondAttribute="leading" constant="8" id="JBK-dT-lIM"/>
+                                    <constraint firstItem="nFj-4Z-dri" firstAttribute="top" secondItem="UZm-zB-jN4" secondAttribute="top" constant="153" id="RI4-Gm-ZCx"/>
+                                    <constraint firstAttribute="height" constant="185" id="Sc3-9f-B7F"/>
+                                    <constraint firstItem="Ek2-25-Ii0" firstAttribute="top" secondItem="fJ5-WZ-zx7" secondAttribute="bottom" constant="20" id="TgJ-dw-OWF"/>
+                                    <constraint firstAttribute="trailing" secondItem="fJ5-WZ-zx7" secondAttribute="trailing" constant="8" id="cAp-un-36J"/>
+                                    <constraint firstItem="fJ5-WZ-zx7" firstAttribute="top" secondItem="UZm-zB-jN4" secondAttribute="top" constant="45" id="dsf-ie-o9C"/>
+                                    <constraint firstItem="nFj-4Z-dri" firstAttribute="centerX" secondItem="UZm-zB-jN4" secondAttribute="centerX" id="tKz-A0-e07"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ek2-25-Ii0" secondAttribute="trailing" constant="8" id="xLX-wb-YJv"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Superheroes-Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Ut-Lk8">
+                                <rect key="frame" x="0.0" y="203" width="375" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="vcy-Zp-DUt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-DJ-itD" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="50" y="538" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.77647058820000003" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="V48-Kj-qgO"/>
+                                    <constraint firstAttribute="height" constant="50" id="zPv-o9-8fT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="inr-aG-j5h" kind="show" id="gFs-ax-LyI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="75" y="461" width="225" height="45"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.83137254900000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8jL-Wq-d6K"/>
+                                    <constraint firstAttribute="width" constant="225" id="fS9-rI-DXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="SHARE YOUR SCORE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareScorePressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="LDb-XU-VnB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current top score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-R8-jix">
+                                <rect key="frame" x="91.5" y="226" width="192.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-s9-YlJ">
+                                <rect key="frame" x="140" y="251" width="95" height="109.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level acheived:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-5t-78y">
+                                <rect key="frame" x="111.5" y="346" width="152" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auF-ak-BZD">
+                                <rect key="frame" x="82.5" y="389" width="210" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="v8a-tx-HtW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho4-3Y-kAs">
+                                <rect key="frame" x="82.5" y="426" width="210" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="m8I-vV-VD2"/>
+                                    <constraint firstAttribute="height" constant="1" id="mcf-aG-uqS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
                             <constraint firstItem="9lP-s9-YlJ" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="3EY-C2-L3q"/>
                             <constraint firstItem="UZm-zB-jN4" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="4AD-5X-qMz"/>
                             <constraint firstItem="auF-ak-BZD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="5Q6-T6-AqB"/>
@@ -192,7 +241,6 @@
                             <constraint firstItem="Ho4-3Y-kAs" firstAttribute="top" secondItem="auF-ak-BZD" secondAttribute="bottom" constant="11" id="9WH-pz-7u5"/>
                             <constraint firstAttribute="trailing" secondItem="ohF-Ut-Lk8" secondAttribute="trailing" id="D5E-oC-6eh"/>
                             <constraint firstItem="VMe-Ux-pQD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="Es4-ho-Cy8"/>
-                            <constraint firstItem="dzd-98-rCz" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="GIz-zc-3Sb"/>
                             <constraint firstItem="vWw-DJ-itD" firstAttribute="top" secondItem="ohF-Ut-Lk8" secondAttribute="bottom" constant="-31" id="GON-uF-IAf"/>
                             <constraint firstItem="VMe-Ux-pQD" firstAttribute="top" secondItem="auF-ak-BZD" secondAttribute="bottom" constant="46" id="JfN-jr-LUT"/>
                             <constraint firstItem="zKB-R8-jix" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="MoH-i2-A8B"/>
@@ -201,9 +249,6 @@
                             <constraint firstItem="UZm-zB-jN4" firstAttribute="leading" secondItem="Fva-r9-wvg" secondAttribute="leading" id="X8Q-dN-w51"/>
                             <constraint firstItem="Ho4-3Y-kAs" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="cK3-O5-wSO"/>
                             <constraint firstItem="vWw-DJ-itD" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="e4B-cs-2Hc"/>
-                            <constraint firstItem="hx2-KS-EZD" firstAttribute="top" secondItem="dzd-98-rCz" secondAttribute="bottom" id="iEz-0W-Xbd"/>
-                            <constraint firstAttribute="trailing" secondItem="dzd-98-rCz" secondAttribute="trailing" id="jrg-kh-qnU"/>
-                            <constraint firstItem="dzd-98-rCz" firstAttribute="top" secondItem="Fva-r9-wvg" secondAttribute="top" id="pxv-GO-XoF"/>
                             <constraint firstItem="OdV-5t-78y" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="r19-h9-q6y"/>
                             <constraint firstItem="zKB-R8-jix" firstAttribute="top" secondItem="nFj-4Z-dri" secondAttribute="bottom" constant="23" id="xaZ-Rw-oEJ"/>
                         </constraints>
@@ -231,18 +276,21 @@
                         <viewControllerLayoutGuide type="bottom" id="NBd-Ey-gXt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j0t-xg-eUe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-X3-mdj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headshot1" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-KE-moX">
+                                        <rect key="frame" x="97.5" y="27.5" width="180" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="cjU-Oi-Wug"/>
                                             <constraint firstAttribute="height" constant="175" id="mvH-Pp-rts"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-CF-8qS" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="60" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="m18-h8-fWi"/>
                                             <constraint firstAttribute="width" constant="60" id="t4J-Sa-Fc9"/>
@@ -264,6 +312,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoV-TV-LFg" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="116" y="592" width="143" height="35"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ayI-8N-maw"/>
@@ -278,17 +327,20 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-3D-xQK">
+                                <rect key="frame" x="16" y="335" width="343" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your guess..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-1R-Pe7">
+                                <rect key="frame" x="41" y="222.5" width="293" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6v-jv-ooZ" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="97.5" y="285" width="180" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Opy-Ga-rmt"/>
@@ -343,18 +395,21 @@
                         <viewControllerLayoutGuide type="bottom" id="GQd-a0-r7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2e-Yh-YWb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOs-ij-LU8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-G2-dCa">
+                                        <rect key="frame" x="87.5" y="46" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="M8j-zH-Xhw"/>
                                             <constraint firstAttribute="height" constant="200" id="pou-RK-gO6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-2q-zbA">
+                                        <rect key="frame" x="135" y="106" width="105" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="105" id="R95-Qt-pIr"/>
                                             <constraint firstAttribute="height" constant="80" id="l2z-7N-XAp"/>
@@ -364,6 +419,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6es-Ep-Z7S" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="AOe-Gm-d0z"/>
                                             <constraint firstAttribute="width" constant="40" id="Tsp-td-AFs"/>
@@ -383,11 +439,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level acheived:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9c-CD-q5Q">
+                                <rect key="frame" x="111.5" y="274" width="152" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apprentice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-1b-IYo">
+                                <rect key="frame" x="86.5" y="317" width="202" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="zyG-X9-9rM"/>
                                 </constraints>
@@ -396,6 +454,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRV-S0-CRa">
+                                <rect key="frame" x="82.5" y="354" width="210" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="BMF-Oc-sSe"/>
@@ -403,6 +462,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkb-fO-aI6" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="50" y="410" width="275" height="50"/>
                                 <color key="backgroundColor" red="0.39607843139999999" green="0.77647058820000003" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2vn-Yi-HQh"/>
@@ -418,6 +478,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-6Z-j2w">
+                                <rect key="frame" x="38.5" y="611" width="298" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Play the full version at Comic-Quiz.com"/>
                                 <connections>
@@ -462,6 +523,6 @@
         <image name="home" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YQB-qa-Bna"/>
+        <segue reference="coV-O8-JZe"/>
     </inferredMetricsTieBreakers>
 </document>

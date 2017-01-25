@@ -10,8 +10,8 @@ import UIKit
 
 class Buttons: UIButton {
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 3.0

@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				273272021DAD44F3001AF568 /* Model */,
+				273271F21DAD374A001AF568 /* VIew */,
 				273271F31DAD3757001AF568 /* Controller */,
 				273271E91DABFE1A001AF568 /* Resources */,
 				273271D51DABE705001AF568 /* AppDelegate.swift */,
@@ -113,7 +114,6 @@
 			children = (
 				273272101DAE7735001AF568 /* GameData.swift */,
 				273272121DAEB2A8001AF568 /* Characters.plist */,
-				273271F21DAD374A001AF568 /* VIew */,
 			);
 			name = Model;
 			sourceTree = "<group>";
