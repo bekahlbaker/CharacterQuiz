@@ -42,6 +42,21 @@ class ScoreViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         scoreLbl.text = String(GameData.currentScore)
         self.save(highScore: Int(GameData.currentScore))
+        setLevel()
+    }
+    
+    @IBAction func webViewPressed(_ sender: UIButton) {
+        if let url = NSURL(string: "http://comic-quiz.com/"){ UIApplication.shared.open(url as URL, options: [:], completionHandler: nil) }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AboutVC" {
+            let aboutVc = segue.destination as? AboutViewController
+            aboutVc?.gameFinished = false
+        }
+    }
+    
+    func setLevel() {
         if (GameData.currentScore >= 0) && (GameData.currentScore <= 5) {
             levelLbl.text = "Ignorant"
         }
@@ -53,17 +68,6 @@ class ScoreViewController: UIViewController {
         }
         if (GameData.currentScore >= 16) && (GameData.currentScore <= 20) {
             levelLbl.text = "Expert"
-        }
-    }
-    
-    @IBAction func webViewPressed(_ sender: UIButton) {
-        if let url = NSURL(string: "http://comic-quiz.com/"){ UIApplication.shared.open(url as URL, options: [:], completionHandler: nil) }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AboutVC" {
-            let aboutVc = segue.destination as? AboutViewController
-            aboutVc?.gameFinished = false
         }
     }
   

@@ -132,7 +132,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
     @IBOutlet weak var cancelBtn: Buttons!
     @IBAction func cancelBtnTapped(_ sender: Any) {
         print("CURRENT GUESS \(currentGuess)")
