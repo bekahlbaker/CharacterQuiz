@@ -30,12 +30,13 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    var headshotImageCurrent = 2
+//    var headshotImageCurrent = 2
     var currentGuess = 0
-    static var gameFinished = false
+    var gameFinished = false
 
     @IBOutlet weak var headshotImg: UIImageView!
     @IBOutlet weak var guessTextField: UITextField!
+    @IBOutlet weak var guessTrackerLbl: Buttons!
     @IBOutlet weak var submitButton: Buttons!
     @IBAction func submitPressed(_ sender: Buttons) {
         
@@ -56,12 +57,24 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                 bioLbl.text = bios[currentGuess]
                 submitButton.isEnabled = false
                 self.save(highScore: Int(GameData.currentScore))
-                checkIfGameIsFinished()
             } else {
                 view.endEditing(true)
                 submitButton.incorrectButton()
             }
         }
+    }
+    
+    func setUpGame() {
+        GameData.currentScore = 0
+        print("CURRENT GUESS \(currentGuess)")
+        guessTrackerLbl.setTitle("\(currentGuess + 1)/20", for: .normal)
+        guessTextField.becomeFirstResponder()
+        submitButton.normalButton()
+        guessTextField.text = ""
+        headshotImg.image = UIImage(named: "headshot\(currentGuess + 1)")
+        bioLbl.text = ""
+        bioLbl.isHidden = true
+        skipButton.isHidden = false
     }
 
 
@@ -75,16 +88,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         guard let characterArray = content["Character"] else { fatalError() }
         if currentGuess < characterArray.count - 1 {
             currentGuess += 1
-            submitButton.normalButton()
-//            nextSkipButton.skipButton()
-            guessTextField.text = ""
-            bioLbl.isHidden = true
-            bioLbl.text = ""
-            headshotImg.image = UIImage(named: "headshot\(headshotImageCurrent)")
-            headshotImageCurrent += 1
+            setUpGame()
+//            headshotImageCurrent += 1
             guessTextField.becomeFirstResponder()
         } else if currentGuess >= characterArray.count - 1 {
-            GameViewController.gameFinished = true
+            gameFinished = true
             performSegue(withIdentifier: "toScoreViewController", sender: nil)
         }
     }
@@ -98,17 +106,12 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         guard let characterArray = content["Character"] else { fatalError() }
         if currentGuess < characterArray.count - 1 {
             currentGuess += 1
-            submitButton.normalButton()
-            skipButton.isHidden = false
-            guessTextField.text = ""
-            bioLbl.isHidden = true
-            bioLbl.text = ""
-            headshotImg.image = UIImage(named: "headshot\(headshotImageCurrent)")
-            headshotImageCurrent += 1
+            setUpGame()
+//            headshotImageCurrent += 1
             guessTextField.becomeFirstResponder()
             submitButton.isEnabled = true
         } else if currentGuess >= characterArray.count - 1 {
-            GameViewController.gameFinished = true
+            gameFinished = true
             performSegue(withIdentifier: "toScoreViewController", sender: nil)
         }
     }
@@ -117,6 +120,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.guessTextField.delegate = self
+        guessTrackerLbl.setTitle("1/20", for: .normal)
+        guessTextField.returnKeyType = UIReturnKeyType.done
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -125,15 +130,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         checkIfGameIsFinished()
-        GameData.currentScore = 0
-        guessTextField.becomeFirstResponder()
-        submitButton.normalButton()
-//        nextSkipButton.skipButton()
-        guessTextField.text = ""
-        headshotImg.image = UIImage(named: "headshot1")
-        bioLbl.text = ""
-        bioLbl.isHidden = true
-        guessTextField.returnKeyType = UIReturnKeyType.done
+        setUpGame()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -149,16 +146,14 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AboutVC" {
-            GameViewController.gameFinished = false
-            let scoreToSend = GameData.currentScore
             let aboutVc = segue.destination as? AboutViewController
-            aboutVc?.scorePassed = scoreToSend
-            checkIfGameIsFinished()
+            aboutVc?.gameFinished = false
+            aboutVc?.scorePassed = currentGuess + 1
         }
     }
     
     func checkIfGameIsFinished() {
-        if GameViewController.gameFinished {
+        if gameFinished {
             print("Game finished")
         } else {
             print("Game not finished")

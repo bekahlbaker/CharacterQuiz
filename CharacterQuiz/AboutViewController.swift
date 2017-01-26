@@ -16,6 +16,7 @@ class AboutViewController: UIViewController {
     var scorePassed = 0
     var highScore: Int!
     var isFirstLaunch = false
+    var gameFinished = false
     
     @IBOutlet weak var blurViewCenter: NSLayoutConstraint!
     
@@ -57,7 +58,13 @@ class AboutViewController: UIViewController {
     }
     
     @IBOutlet weak var playNowBtn: Buttons!
+    @IBAction func playNowTapped(_ sender: Any) {
+        performSegue(withIdentifier: "GameVC", sender: nil)
+    }
     @IBOutlet weak var playAgainBtn: Buttons!
+    @IBAction func playAgainTapped(_ sender: Any) {
+        performSegue(withIdentifier: "GameVC", sender: nil)
+    }
     
     
     func callHighScore() {
@@ -106,11 +113,11 @@ class AboutViewController: UIViewController {
             playGame()
         }
         
-        if GameViewController.gameFinished == false && GameData.currentScore >= 1 {
+        if gameFinished == false && GameData.currentScore >= 1 {
             finishGame()
         }
         
-        if GameViewController.gameFinished == true || GameData.currentScore == 0 && isFirstLaunch == false {
+        if gameFinished == true || GameData.currentScore == 0 && isFirstLaunch == false {
             playAgain()
         }
     }
@@ -173,10 +180,22 @@ class AboutViewController: UIViewController {
     
     
     func checkIfGameIsFinished() {
-        if GameViewController.gameFinished {
+        if gameFinished {
             print("Game finished")
         } else {
             print("Game not finished")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GameVC" {
+            if gameFinished == true {
+                let gameVC = segue.destination as? GameViewController
+                gameVC?.currentGuess = 0
+            } else if gameFinished == false {
+                let gameVC = segue.destination as? GameViewController
+                gameVC?.currentGuess = scorePassed
+            }
         }
     }
 }

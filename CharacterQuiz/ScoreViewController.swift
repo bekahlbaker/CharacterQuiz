@@ -17,6 +17,7 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var scoreLbl: UILabel!
     @IBAction func playAgainPressed(_ sender: Buttons) {
         GameData.currentScore = 0
+        performSegue(withIdentifier: "AboutVC", sender: nil)
     }
     @IBAction func shareScorePressed(_ sender: Buttons) {
     }
@@ -57,6 +58,13 @@ class ScoreViewController: UIViewController {
     
     @IBAction func webViewPressed(_ sender: UIButton) {
         if let url = NSURL(string: "http://comic-quiz.com/"){ UIApplication.shared.open(url as URL, options: [:], completionHandler: nil) }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AboutVC" {
+            let aboutVc = segue.destination as? AboutViewController
+            aboutVc?.gameFinished = false
+        }
     }
   
 }

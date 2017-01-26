@@ -84,7 +84,8 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="inr-aG-j5h" kind="show" id="gFs-ax-LyI"/>
+                                    <action selector="playNowTapped:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="BK2-eN-7k4"/>
+                                    <segue destination="inr-aG-j5h" kind="show" identifier="GameVC" id="gFs-ax-LyI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-Ux-pQD" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
@@ -141,7 +142,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="inr-aG-j5h" kind="show" id="Qpo-vN-OOj"/>
+                                    <action selector="playAgainTapped:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="A5s-86-Kag"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ho4-3Y-kAs">
@@ -152,7 +153,7 @@
                                     <constraint firstAttribute="height" constant="1" id="mcf-aG-uqS"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-98-rCz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9nm-dw-XSD">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -263,6 +264,7 @@
                         <outlet property="shareScoreBtn" destination="VMe-Ux-pQD" id="gTl-Pv-rPB"/>
                         <outlet property="underlineView" destination="Ho4-3Y-kAs" id="OC3-Tc-R7r"/>
                         <outlet property="yourCurrentScoreLbl" destination="zKB-R8-jix" id="Clx-Uy-8qL"/>
+                        <segue destination="inr-aG-j5h" kind="show" id="tXo-mT-H2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,25 +286,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-X3-mdj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headshot1" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-KE-moX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-KE-moX">
                                         <rect key="frame" x="97.5" y="7.5" width="180" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="cjU-Oi-Wug"/>
                                             <constraint firstAttribute="height" constant="175" id="mvH-Pp-rts"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-CF-8qS" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="16" width="60" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="m18-h8-fWi"/>
-                                            <constraint firstAttribute="width" constant="60" id="t4J-Sa-Fc9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Cancel"/>
-                                        <connections>
-                                            <action selector="cancelBtnTapped:" destination="inr-aG-j5h" eventType="touchUpInside" id="cfi-cs-T63"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoV-TV-LFg" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
                                         <rect key="frame" x="309" y="16" width="50" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -318,14 +308,38 @@
                                             <action selector="skipPressed:" destination="inr-aG-j5h" eventType="touchUpInside" id="hdy-SE-gqa"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-CF-8qS" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="48" width="60" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="m18-h8-fWi"/>
+                                            <constraint firstAttribute="width" constant="60" id="t4J-Sa-Fc9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelBtnTapped:" destination="inr-aG-j5h" eventType="touchUpInside" id="cfi-cs-T63"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coD-0B-pyw" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="30" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title=" ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelBtnTapped:" destination="inr-aG-j5h" eventType="touchUpInside" id="1IR-0W-Jd7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Kzs-CF-8qS" firstAttribute="leading" secondItem="wh9-X3-mdj" secondAttribute="leading" constant="8" id="40t-AE-wwE"/>
                                     <constraint firstAttribute="height" constant="270" id="6gJ-bH-cqs"/>
+                                    <constraint firstItem="Kzs-CF-8qS" firstAttribute="top" secondItem="coD-0B-pyw" secondAttribute="bottom" id="Ble-cA-YfC"/>
+                                    <constraint firstItem="coD-0B-pyw" firstAttribute="top" secondItem="wh9-X3-mdj" secondAttribute="top" constant="8" id="DPm-uz-c8p"/>
                                     <constraint firstItem="xc6-KE-moX" firstAttribute="centerY" secondItem="wh9-X3-mdj" secondAttribute="centerY" constant="-40" id="Kpt-Se-MGj"/>
+                                    <constraint firstItem="coD-0B-pyw" firstAttribute="leading" secondItem="wh9-X3-mdj" secondAttribute="leading" constant="8" id="Mwp-2W-83u"/>
                                     <constraint firstItem="xc6-KE-moX" firstAttribute="centerX" secondItem="wh9-X3-mdj" secondAttribute="centerX" id="Num-qF-b8G"/>
-                                    <constraint firstItem="Kzs-CF-8qS" firstAttribute="top" secondItem="wh9-X3-mdj" secondAttribute="top" constant="16" id="YBo-Kb-md0"/>
                                     <constraint firstAttribute="trailing" secondItem="zoV-TV-LFg" secondAttribute="trailing" constant="16" id="c1o-LM-6BZ"/>
                                     <constraint firstItem="zoV-TV-LFg" firstAttribute="top" secondItem="wh9-X3-mdj" secondAttribute="top" constant="16" id="yhD-Xi-g8z"/>
                                 </constraints>
@@ -400,6 +414,7 @@
                         <outlet property="bioLbl" destination="Tth-3D-xQK" id="lm4-Sl-BBO"/>
                         <outlet property="cancelBtn" destination="Kzs-CF-8qS" id="Ht7-Gq-qaH"/>
                         <outlet property="guessTextField" destination="L1G-1R-Pe7" id="ya3-Ob-ZRC"/>
+                        <outlet property="guessTrackerLbl" destination="coD-0B-pyw" id="3Nw-fp-3ud"/>
                         <outlet property="headshotImg" destination="xc6-KE-moX" id="bBv-Z8-vdN"/>
                         <outlet property="nextBtn" destination="oQO-ew-q6x" id="41e-Hh-VqR"/>
                         <outlet property="skipButton" destination="zoV-TV-LFg" id="y3d-So-qTQ"/>
@@ -410,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ow0-PR-1CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065.625" y="67.5"/>
+            <point key="canvasLocation" x="3064.8000000000002" y="67.016491754122939"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="peU-WJ-uPE">
@@ -434,7 +449,7 @@
                                             <constraint firstAttribute="height" constant="200" id="pou-RK-gO6"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-2q-zbA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfz-2q-zbA">
                                         <rect key="frame" x="135" y="92" width="105" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="105" id="R95-Qt-pIr"/>
@@ -470,7 +485,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apprentice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-1b-IYo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-1b-IYo">
                                 <rect key="frame" x="86.5" y="280.5" width="202" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="zyG-X9-9rM"/>
@@ -500,7 +515,6 @@
                                 </state>
                                 <connections>
                                     <action selector="playAgainPressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="cv8-ED-o1c"/>
-                                    <segue destination="Ti0-Zk-2wS" kind="show" identifier="" id="YQB-qa-Bna"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-6Z-j2w">
@@ -535,6 +549,7 @@
                     <connections>
                         <outlet property="levelLbl" destination="Uvs-1b-IYo" id="o8B-nZ-mVy"/>
                         <outlet property="scoreLbl" destination="pfz-2q-zbA" id="sHx-Nu-UIc"/>
+                        <segue destination="Ti0-Zk-2wS" kind="show" identifier="AboutVC" id="n4w-eO-tO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYG-Z9-aOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -544,12 +559,11 @@
     </scenes>
     <resources>
         <image name="circle" width="256" height="256"/>
-        <image name="headshot1" width="200" height="250"/>
         <image name="home" width="512" height="512"/>
         <image name="kapow-1601675_1280" width="1280" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qvd-QF-Gw1"/>
+        <segue reference="n4w-eO-tO6"/>
         <segue reference="gFs-ax-LyI"/>
     </inferredMetricsTieBreakers>
 </document>
