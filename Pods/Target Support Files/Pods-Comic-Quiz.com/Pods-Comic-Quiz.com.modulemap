@@ -1,0 +1,6 @@
+framework module Pods_Comic_Quiz_com {
+  umbrella header "Pods-Comic-Quiz.com-umbrella.h"
+
+  export *
+  module * { export * }
+}
