@@ -13,26 +13,9 @@ import CoreData
 class GameViewController: UIViewController, UITextFieldDelegate {
     
     var scores: [NSManagedObject] = []
-    
-    func save(highScore: Int) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Score", in: managedContext)!
-        let score = NSManagedObject(entity: entity, insertInto: managedContext)
-        score.setValue(highScore, forKey: "highScore")
-        do{
-            try managedContext.save()
-            scores.append(score)
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
-    
-//    var headshotImageCurrent = 2
     var currentGuess = 0
     var gameFinished = false
+    var correctGuess = false
 
     @IBOutlet weak var headshotImg: UIImageView!
     @IBOutlet weak var guessTextField: UITextField!
@@ -49,14 +32,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
          if currentGuess < characterArray.count {
             if guessTextField.text?.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "the", with: "").replacingOccurrences(of: ".", with: "") == characterArray[currentGuess] {
                 view.endEditing(true)
-                submitButton.correctButton()
-                skipButton.isHidden = true
-                GameData.currentScore += 1
-                print(GameData.currentScore)
-                bioLbl.isHidden = false
                 bioLbl.text = bios[currentGuess]
-                submitButton.isEnabled = false
-                self.save(highScore: Int(GameData.currentScore))
+                correctAnswer()
             } else {
                 view.endEditing(true)
                 submitButton.incorrectButton()
@@ -64,9 +41,20 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func correctAnswer() {
+        submitButton.correctButton()
+        skipButton.isHidden = true
+        nextBtn.isHidden = false
+        GameData.currentScore += 1
+        print("CURRENT SCORE \(GameData.currentScore)")
+        bioLbl.isHidden = false
+        submitButton.isEnabled = false
+        correctGuess = true
+    }
+    
     func setUpGame() {
-        GameData.currentScore = 0
         print("CURRENT GUESS \(currentGuess)")
+        print("CURRENT SCORE \(GameData.currentScore)")
         guessTrackerLbl.setTitle("\(currentGuess + 1)/20", for: .normal)
         guessTextField.becomeFirstResponder()
         submitButton.normalButton()
@@ -75,12 +63,15 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         bioLbl.text = ""
         bioLbl.isHidden = true
         skipButton.isHidden = false
+        nextBtn.isHidden = true
+        correctGuess = false
     }
 
 
     @IBOutlet weak var bioLbl: UITextView!
     @IBOutlet weak var skipButton: Buttons!
     @IBAction func skipPressed(_ sender: Buttons) {
+        print("CURRENT GUESS \(currentGuess)")
         let pList = Bundle.main.path(forResource: "Characters", ofType: "plist")
         guard let content = NSDictionary(contentsOfFile: pList!) as? [String:[String]] else {
             fatalError()
@@ -95,10 +86,12 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             gameFinished = true
             performSegue(withIdentifier: "toScoreViewController", sender: nil)
         }
+        print("CURRENT GUESS \(currentGuess)")
     }
     
     @IBOutlet weak var nextBtn: Buttons!
     @IBAction func nextBtnTapped(_ sender: Any) {
+        print("CURRENT GUESS \(currentGuess)")
         let pList = Bundle.main.path(forResource: "Characters", ofType: "plist")
         guard let content = NSDictionary(contentsOfFile: pList!) as? [String:[String]] else {
             fatalError()
@@ -114,6 +107,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             gameFinished = true
             performSegue(withIdentifier: "toScoreViewController", sender: nil)
         }
+        print("CURRENT GUESS \(currentGuess)")
     }
     
     
@@ -141,6 +135,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var cancelBtn: Buttons!
     @IBAction func cancelBtnTapped(_ sender: Any) {
+        print("CURRENT GUESS \(currentGuess)")
         performSegue(withIdentifier: "AboutVC", sender: nil)
     }
     
@@ -148,7 +143,12 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "AboutVC" {
             let aboutVc = segue.destination as? AboutViewController
             aboutVc?.gameFinished = false
-            aboutVc?.scorePassed = currentGuess + 1
+            if correctGuess == true {
+             aboutVc?.guessToStartAt = currentGuess + 1
+            } else if correctGuess == false {
+                aboutVc?.guessToStartAt = currentGuess
+            }
+            aboutVc?.scoreToStartAt = GameData.currentScore
         }
     }
     

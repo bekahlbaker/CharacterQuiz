@@ -13,10 +13,11 @@ import CoreData
 class AboutViewController: UIViewController {
     
     var scores: [NSManagedObject] = []
-    var scorePassed = 0
+    var guessToStartAt = 0
+    var scoreToStartAt = 0
     var highScore: Int!
     var isFirstLaunch = false
-    var gameFinished = false
+    var gameFinished = true
     
     @IBOutlet weak var blurViewCenter: NSLayoutConstraint!
     
@@ -194,7 +195,8 @@ class AboutViewController: UIViewController {
                 gameVC?.currentGuess = 0
             } else if gameFinished == false {
                 let gameVC = segue.destination as? GameViewController
-                gameVC?.currentGuess = scorePassed
+                gameVC?.currentGuess = guessToStartAt
+                GameData.currentScore = scoreToStartAt
             }
         }
     }
