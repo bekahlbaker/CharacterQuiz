@@ -45,6 +45,12 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var levelLbl: UILabel!
     @IBOutlet weak var shareScoreBtn: Buttons!
     @IBOutlet weak var underlineView: UIView!
+
+    @IBAction func shareScorePressed(_ sender: Buttons) {
+        if let score = currentHighScoreLbl.text {
+            shareTextImageAndURL(sharingText: "My high score on the Comic-Quiz.com App is \(score)/20!", sharingURL: NSURL(string: "http://comic-quiz.com/"))
+        }
+    }
     
     func shareTextImageAndURL(sharingText: String?, sharingURL: NSURL?) {
         var sharingItems = [AnyObject]()
@@ -70,13 +76,6 @@ class AboutViewController: UIViewController {
         
     }
     
-    
-    @IBAction func shareScorePressed(_ sender: Buttons) {
-        if let score = currentHighScoreLbl.text {
-            shareTextImageAndURL(sharingText: "My high score on the Comic-Quiz.com App is \(score)/20!", sharingURL: NSURL(string: "http://comic-quiz.com/"))
-        }
-    }
-    
     @IBOutlet weak var playNowBtn: Buttons!
     @IBAction func playNowTapped(_ sender: Any) {
         performSegue(withIdentifier: "GameVC", sender: nil)
@@ -85,7 +84,6 @@ class AboutViewController: UIViewController {
     @IBAction func playAgainTapped(_ sender: Any) {
         performSegue(withIdentifier: "GameVC", sender: nil)
     }
-    
     
     func callHighScore() {
         
@@ -137,7 +135,7 @@ class AboutViewController: UIViewController {
             finishGame()
         }
         
-        if gameFinished == true || GameData.currentScore == 0 && isFirstLaunch == false {
+        if isFirstLaunch == false && gameFinished == true && GameData.currentScore == 0 {
             playAgain()
         }
     }

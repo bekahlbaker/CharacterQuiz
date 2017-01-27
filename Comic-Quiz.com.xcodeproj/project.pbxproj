@@ -12,7 +12,6 @@
 		273271DB1DABE705001AF568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273271D91DABE705001AF568 /* Main.storyboard */; };
 		273271DD1DABE705001AF568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273271DC1DABE705001AF568 /* Assets.xcassets */; };
 		273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273271DE1DABE705001AF568 /* LaunchScreen.storyboard */; };
-		273271F11DAD3599001AF568 /* bg-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 273271F01DAD3599001AF568 /* bg-blue.png */; };
 		273272011DAD4225001AF568 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272001DAD4225001AF568 /* Buttons.swift */; };
 		273272091DAD5357001AF568 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273272081DAD5357001AF568 /* GameViewController.swift */; };
 		2732720D1DAD71D1001AF568 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732720C1DAD71D1001AF568 /* ScoreViewController.swift */; };
@@ -31,7 +30,6 @@
 		273271DC1DABE705001AF568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		273271DF1DABE705001AF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		273271E11DABE705001AF568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		273271F01DAD3599001AF568 /* bg-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-blue.png"; sourceTree = "<group>"; };
 		273272001DAD4225001AF568 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		273272081DAD5357001AF568 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2732720C1DAD71D1001AF568 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 		273271E91DABFE1A001AF568 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				273271F01DAD3599001AF568 /* bg-blue.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -207,7 +204,6 @@
 			files = (
 				273271E01DABE705001AF568 /* LaunchScreen.storyboard in Resources */,
 				273271DD1DABE705001AF568 /* Assets.xcassets in Resources */,
-				273271F11DAD3599001AF568 /* bg-blue.png in Resources */,
 				273272131DAEB2A8001AF568 /* Characters.plist in Resources */,
 				273271DB1DABE705001AF568 /* Main.storyboard in Resources */,
 			);

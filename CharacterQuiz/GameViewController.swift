@@ -52,22 +52,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         correctGuess = true
     }
     
-    func setUpGame() {
-        print("CURRENT GUESS \(currentGuess)")
-        print("CURRENT SCORE \(GameData.currentScore)")
-        guessTrackerLbl.setTitle("\(currentGuess + 1)/20", for: .normal)
-        guessTextField.becomeFirstResponder()
-        submitButton.normalButton()
-        guessTextField.text = ""
-        headshotImg.image = UIImage(named: "headshot\(currentGuess + 1)")
-        bioLbl.text = ""
-        bioLbl.isHidden = true
-        skipButton.isHidden = false
-        nextBtn.isHidden = true
-        correctGuess = false
-    }
-
-
     @IBOutlet weak var bioLbl: UITextView!
     @IBOutlet weak var skipButton: Buttons!
     @IBAction func skipPressed(_ sender: Buttons) {
@@ -80,7 +64,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if currentGuess < characterArray.count - 1 {
             currentGuess += 1
             setUpGame()
-//            headshotImageCurrent += 1
             guessTextField.becomeFirstResponder()
         } else if currentGuess >= characterArray.count - 1 {
             gameFinished = true
@@ -100,7 +83,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if currentGuess < characterArray.count - 1 {
             currentGuess += 1
             setUpGame()
-//            headshotImageCurrent += 1
             guessTextField.becomeFirstResponder()
             submitButton.isEnabled = true
         } else if currentGuess >= characterArray.count - 1 {
@@ -110,6 +92,20 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         print("CURRENT GUESS \(currentGuess)")
     }
     
+    func setUpGame() {
+        print("CURRENT GUESS \(currentGuess)")
+        print("CURRENT SCORE \(GameData.currentScore)")
+        guessTrackerLbl.setTitle("\(currentGuess + 1)/20", for: .normal)
+        guessTextField.becomeFirstResponder()
+        submitButton.normalButton()
+        guessTextField.text = ""
+        headshotImg.image = UIImage(named: "headshot\(currentGuess + 1)")
+        bioLbl.text = ""
+        bioLbl.isHidden = true
+        skipButton.isHidden = false
+        nextBtn.isHidden = true
+        correctGuess = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -31,22 +31,6 @@ class ScoreViewController: UIViewController {
         }
     }
     
-    func save(highScore: Int) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Score", in: managedContext)!
-        let score = NSManagedObject(entity: entity, insertInto: managedContext)
-        score.setValue(highScore, forKey: "highScore")
-        do{
-            try managedContext.save()
-            scores.append(score)
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         scoreLbl.text = String(GameData.currentScore)
         self.save(highScore: Int(GameData.currentScore))
@@ -60,7 +44,23 @@ class ScoreViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AboutVC" {
             let aboutVc = segue.destination as? AboutViewController
-            aboutVc?.gameFinished = false
+            aboutVc?.gameFinished = true
+        }
+    }
+    
+    func save(highScore: Int) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Score", in: managedContext)!
+        let score = NSManagedObject(entity: entity, insertInto: managedContext)
+        score.setValue(highScore, forKey: "highScore")
+        do{
+            try managedContext.save()
+            scores.append(score)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
         }
     }
     
