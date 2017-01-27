@@ -16,7 +16,7 @@ Created by Bekah L. Baker 2016-2017
 
 ## Versioning
 
-1.0 
+1.0.0
 
 ## Authors
 
