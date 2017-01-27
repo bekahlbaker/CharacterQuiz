@@ -19,9 +19,17 @@ class ScoreViewController: UIViewController {
         GameData.currentScore = 0
         performSegue(withIdentifier: "AboutVC", sender: nil)
     }
-    @IBAction func shareScorePressed(_ sender: Buttons) {
+    
+    @IBAction func homePressed(_ sender: Buttons) {
+        GameData.currentScore = 0
+        performSegue(withIdentifier: "AboutVC", sender: nil)
     }
     
+    @IBAction func shareScorePressed(_ sender: Buttons) {
+        if let score = scoreLbl.text {
+            shareTextImageAndURL(sharingText: "I just scored \(score)/20 on the Comic-Quiz.com App!", sharingURL: NSURL(string: "http://comic-quiz.com/"))
+        }
+    }
     
     func save(highScore: Int) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -70,5 +78,28 @@ class ScoreViewController: UIViewController {
             levelLbl.text = "Expert"
         }
     }
-  
+    
+    func shareTextImageAndURL(sharingText: String?, sharingURL: NSURL?) {
+        var sharingItems = [AnyObject]()
+        
+        if let text = sharingText {
+            sharingItems.append(text as AnyObject)
+        }
+        if let url = sharingURL {
+            sharingItems.append(url)
+        }
+        
+        let alert = UIAlertController(title: "Shared to Facebook!", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+            if success {
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
 }

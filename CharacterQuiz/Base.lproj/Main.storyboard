@@ -264,7 +264,7 @@
                         <outlet property="shareScoreBtn" destination="VMe-Ux-pQD" id="gTl-Pv-rPB"/>
                         <outlet property="underlineView" destination="Ho4-3Y-kAs" id="OC3-Tc-R7r"/>
                         <outlet property="yourCurrentScoreLbl" destination="zKB-R8-jix" id="Clx-Uy-8qL"/>
-                        <segue destination="inr-aG-j5h" kind="show" id="tXo-mT-H2b"/>
+                        <segue destination="inr-aG-j5h" kind="show" identifier="GameVC" id="tXo-mT-H2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aR-OL-9rO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -466,6 +466,9 @@
                                             <constraint firstAttribute="width" constant="40" id="Tsp-td-AFs"/>
                                         </constraints>
                                         <state key="normal" image="home"/>
+                                        <connections>
+                                            <action selector="homePressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="jVK-V1-Ju4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -518,11 +521,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-6Z-j2w">
-                                <rect key="frame" x="38.5" y="623" width="298" height="36"/>
+                                <rect key="frame" x="38.5" y="631" width="298" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Play the full version at Comic-Quiz.com"/>
                                 <connections>
                                     <action selector="webViewPressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="hjx-iD-oxX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwb-ll-vvP" customClass="Buttons" customModule="Comic_Quiz_com" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="413.5" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.83137254900000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9yb-ZC-mAR"/>
+                                    <constraint firstAttribute="width" constant="200" id="ZTs-U1-rTF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="SHARE YOUR SCORE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareScorePressed:" destination="Ti0-Zk-2wS" eventType="touchUpInside" id="dqR-GE-1Cf"/>
+                                    <action selector="shareScorePressed:" destination="gYN-OI-Ajg" eventType="touchUpInside" id="wbA-d2-iPt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -531,11 +550,13 @@
                             <constraint firstItem="BRV-S0-CRa" firstAttribute="top" secondItem="Uvs-1b-IYo" secondAttribute="bottom" id="2vH-cp-fTV"/>
                             <constraint firstItem="v9c-CD-q5Q" firstAttribute="top" secondItem="pfz-2q-zbA" secondAttribute="bottom" constant="70" id="4sy-9c-J5y"/>
                             <constraint firstAttribute="trailing" secondItem="oOs-ij-LU8" secondAttribute="trailing" id="8vz-BM-q7S"/>
+                            <constraint firstItem="Vwb-ll-vvP" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="Acq-lE-y0l"/>
                             <constraint firstItem="Pkb-fO-aI6" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="Ajg-9m-IkC"/>
                             <constraint firstItem="BRV-S0-CRa" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="CoL-2f-4uD"/>
                             <constraint firstItem="Uvs-1b-IYo" firstAttribute="top" secondItem="v9c-CD-q5Q" secondAttribute="bottom" constant="8" id="Dn9-Lb-OgU"/>
+                            <constraint firstItem="Vwb-ll-vvP" firstAttribute="top" secondItem="Pkb-fO-aI6" secondAttribute="bottom" constant="16" id="E3i-C8-185"/>
                             <constraint firstItem="v9c-CD-q5Q" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="UJN-ic-v9B"/>
-                            <constraint firstItem="GQd-a0-r7s" firstAttribute="top" secondItem="XYB-6Z-j2w" secondAttribute="bottom" constant="8" id="UvF-De-SCm"/>
+                            <constraint firstItem="GQd-a0-r7s" firstAttribute="top" secondItem="XYB-6Z-j2w" secondAttribute="bottom" id="UvF-De-SCm"/>
                             <constraint firstItem="XYB-6Z-j2w" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="dhx-UX-Q0V"/>
                             <constraint firstItem="Uvs-1b-IYo" firstAttribute="centerX" secondItem="d2e-Yh-YWb" secondAttribute="centerX" id="nSN-cT-fzP"/>
                             <constraint firstItem="oOs-ij-LU8" firstAttribute="leading" secondItem="d2e-Yh-YWb" secondAttribute="leading" id="ozV-mr-1Vy"/>
@@ -564,6 +585,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n4w-eO-tO6"/>
-        <segue reference="gFs-ax-LyI"/>
+        <segue reference="tXo-mT-H2b"/>
     </inferredMetricsTieBreakers>
 </document>

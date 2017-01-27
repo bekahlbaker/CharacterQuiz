@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FacebookShare
 
 
 class AboutViewController: UIViewController {
@@ -45,16 +46,34 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var shareScoreBtn: Buttons!
     @IBOutlet weak var underlineView: UIView!
     
+    func shareTextImageAndURL(sharingText: String?, sharingURL: NSURL?) {
+        var sharingItems = [AnyObject]()
+        
+        if let text = sharingText {
+            sharingItems.append(text as AnyObject)
+        }
+        if let url = sharingURL {
+            sharingItems.append(url)
+        }
+        
+        let alert = UIAlertController(title: "Shared to Facebook!", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+            if success {
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func shareScorePressed(_ sender: Buttons) {
-        let score = currentHighScoreLbl.text
-        if let scoreToShare = score {
-            let text = "My high score on Comic-Quiz.com is \(scoreToShare)!"
-            let objectsToShare: [AnyObject] = [ text as AnyObject ]
-            let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            
-            self.present(activityViewController, animated: true, completion: nil)
-            
+        if let score = currentHighScoreLbl.text {
+            shareTextImageAndURL(sharingText: "My high score on the Comic-Quiz.com App is \(score)/20!", sharingURL: NSURL(string: "http://comic-quiz.com/"))
         }
     }
     

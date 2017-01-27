@@ -10,6 +10,7 @@ Created by Bekah L. Baker 2016-2017
 
 * [Swift](https://developer.apple.com/swift/) 
 * [XCode](https://developer.apple.com/xcode/)
+* [FacebookShare](https://developers.facebook.com) - Facebook sharing framework
 * Core Data
 * Animations
 
