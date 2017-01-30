@@ -247,7 +247,7 @@
                             <constraint firstItem="OdV-5t-78y" firstAttribute="centerX" secondItem="Fva-r9-wvg" secondAttribute="centerX" id="r19-h9-q6y"/>
                             <constraint firstItem="OdV-5t-78y" firstAttribute="top" secondItem="9lP-s9-YlJ" secondAttribute="bottom" constant="8" id="x6V-Xi-xE8"/>
                             <constraint firstItem="zKB-R8-jix" firstAttribute="top" secondItem="nFj-4Z-dri" secondAttribute="bottom" constant="8" id="xaZ-Rw-oEJ"/>
-                            <constraint firstItem="dzd-98-rCz" firstAttribute="centerY" secondItem="Fva-r9-wvg" secondAttribute="centerY" id="yII-Oy-zed"/>
+                            <constraint firstItem="dzd-98-rCz" firstAttribute="centerY" secondItem="Fva-r9-wvg" secondAttribute="centerY" priority="250" id="yII-Oy-zed"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>

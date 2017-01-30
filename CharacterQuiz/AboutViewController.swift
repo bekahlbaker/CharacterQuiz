@@ -97,12 +97,10 @@ class AboutViewController: UIViewController {
         fetchRequest.sortDescriptors = [sortDescriptor]
         do {
             scores = try managedContext.fetch(fetchRequest)
-            print("SCORES: \(scores)")
             if scores.count > 0 {
                 let max = scores.first
-                print(max?.value(forKey: "highScore") as! Int)
                 highScore = max?.value(forKey: "highScore") as! Int!
-                print("\(highScore)")
+                print("SCORE: \(highScore!)")
                 currentHighScoreLbl.text = String(highScore)
             } else {
                 print("No high score")
@@ -117,8 +115,8 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         self.blurView.isHidden = true
         blurViewCenter.constant -= view.frame.height
-        callHighScore()
-        checkIfGameIsFinished()
+        
+        checkStateOfGame()
         
         if(!UserDefaults.standard.bool(forKey: "firstlaunch1.0")){
             isFirstLaunch = true
@@ -127,7 +125,7 @@ class AboutViewController: UIViewController {
             UserDefaults.standard.synchronize();
         }
         
-        if isFirstLaunch == true {
+        if isFirstLaunch == true && GameData.currentScore == 0 {
             playGame()
         }
         
@@ -135,9 +133,17 @@ class AboutViewController: UIViewController {
             finishGame()
         }
         
-        if isFirstLaunch == false && gameFinished == true && GameData.currentScore == 0 {
+        if isFirstLaunch == false && gameFinished == true || GameData.currentScore == 0 {
             playAgain()
         }
+    }
+    
+    func checkStateOfGame() {
+        print("CHECK STATE OF GAME")
+        checkIfIsFirstLaunch()
+        callHighScore()
+        checkIfGameIsFinished()
+        print(GameData.currentScore)
     }
     
     func playGame() {
@@ -202,6 +208,14 @@ class AboutViewController: UIViewController {
             print("Game finished")
         } else {
             print("Game not finished")
+        }
+    }
+    
+    func checkIfIsFirstLaunch() {
+        if isFirstLaunch {
+            print("First launch")
+        } else {
+            print("Not first launch")
         }
     }
     

@@ -45,6 +45,7 @@ class ScoreViewController: UIViewController {
         if segue.identifier == "AboutVC" {
             let aboutVc = segue.destination as? AboutViewController
             aboutVc?.gameFinished = true
+            aboutVc?.isFirstLaunch = false
         }
     }
     

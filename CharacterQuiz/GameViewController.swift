@@ -138,6 +138,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "AboutVC" {
             let aboutVc = segue.destination as? AboutViewController
             aboutVc?.gameFinished = false
+            aboutVc?.isFirstLaunch = false
             if correctGuess == true {
              aboutVc?.guessToStartAt = currentGuess + 1
             } else if correctGuess == false {
